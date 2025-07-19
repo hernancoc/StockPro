@@ -1,0 +1,15 @@
+45|pedro|pera|pera|2|122121|1222|True|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+22|jose|comida|josesito|2|11221|1222|True|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 21:00:15
+13|prueba0|Electronico|QA|2|7|7|True|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+13|Prueba13|Consola VideoJuegos|QA2|0|12|12|True|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+23|QA23|Consola VideoJuegos|Tester|1|1800|1500|True|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+25|JORDAN|Electronico|MICHAEL|1|11|12|False|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+29|MYKE|Electronico|TOWER|1|15|12|True|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+7|HERNAN|Electronico|COROMINAS|1|122|122|False|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+77|prubeasa|electronico|pruebasa|1|12|12|True|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+28|iphone 21|electronico|apple|2|12000|1200|False|ImagenesProductos\apple.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+99|carro|electronico|toyota|2|150000|100000|True|ImagenesProductos\Carro.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+99|carro|electronico|toyota|2|150000|100000|True|ImagenesProductos\Carro.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+98|s24|electronico|samsung|2|35000|25000|False|ImagenesProductos\samsung.png|2025-07-08 19:00:00|2025-07-08 19:00:00
+95|vaso|plastico|plastifar|15|250|210|True|ImagenesProductos\Carro.png|2025-07-07 21:34:53|2025-07-08 00:05:33
+97|yipeta|comida|autozama|2|13555|1200|True|ImagenesProductos\samsung.png|2025-07-08 13:49:22|2025-07-08 13:49:22

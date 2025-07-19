@@ -1,0 +1,13 @@
+admin|1234|False
+hernan|abcd|True
+braulin|braulin|True
+angel|baronzuelo|True
+anthony|ellider01|True
+marcos|marquito|True
+jose|jose|True
+prueba|prueba|True
+prueba1|prueba2|True
+prueba3|prueba3|True
+prueba4|prueba4|False
+prueba5|prueba5|True
+marcos|marcos|True

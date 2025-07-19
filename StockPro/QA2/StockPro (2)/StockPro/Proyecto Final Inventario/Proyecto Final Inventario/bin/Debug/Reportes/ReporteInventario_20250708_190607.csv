@@ -1,0 +1,24 @@
+﻿ID,Nombre,Categoria,Proveedor,Cantidad,PrecioVenta,PrecioCompra,Activo,UrlImagen,FechaCreacion,FechaActualizacion
+0,Iphone13,Apple,Villa mella,1203,1200,900,True,,2025-07-08 19:00:00,2025-07-08 19:00:00
+4,PeraPod,pera,pera,1,1500,1200,True,,2025-07-08 19:00:00,2025-07-08 19:00:00
+1,222,Manzana,Manzana,232324,232323,2332,True,,2025-07-08 19:00:00,2025-07-08 19:00:00
+12,122,Manzana,Manzana,2,211212,122112,True,,2025-07-08 19:00:00,2025-07-08 19:00:00
+2323,2323,Manzana,Manzana,2300,2323,2332,True,,2025-07-08 19:00:00,2025-07-08 19:00:00
+2324,2323,Manzana,Manzana,1,2323,2332,True,,2025-07-08 19:00:00,2025-07-08 19:00:00
+19,juan,Manzana,Manzana,2,1800,1500,True,,2025-07-08 19:00:00,2025-07-08 19:00:00
+45,pedro,pera,pera,2,122121,1222,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+22,jose,Manzana,josesito,2,11221,1222,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+13,prueba0,Electronico,QA,2,7,7,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+13,Prueba13,Consola VideoJuegos,QA2,0,12,12,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+23,QA23,Consola VideoJuegos,Tester,1,1800,1500,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+25,JORDAN,Electronico,MICHAEL,1,11,12,False,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+29,MYKE,Electronico,TOWER,1,15,12,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+7,HERNAN,Electronico,COROMINAS,1,122,122,False,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+77,prubeasa,electronico,pruebasa,1,12,12,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+28,iphone 21,electronico,apple,2,12000,1200,False,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\apple.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+99,carro,electronico,toyota,2,150000,100000,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\Carro.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+99,carro,electronico,toyota,2,150000,100000,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\Carro.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+98,s24,electronico,samsung,2,35000,25000,False,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\samsung.png,2025-07-08 19:00:00,2025-07-08 19:00:00
+95,vaso,plastico,plastifar,15,250,210,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\ps5.png,2025-07-07 21:34:53,2025-07-08 00:05:33
+97,yipeta,comida,autozama,2,13555,1200,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\samsung.png,2025-07-08 13:49:22,2025-07-08 13:49:22
+94,brugal extraviejo,bebida alcohilica,brugal,12,1000,700,True,C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\ps5.png,2025-07-08 19:03:59,2025-07-08 19:05:33

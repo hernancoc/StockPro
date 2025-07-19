@@ -1,0 +1,724 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\dll\\user.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\dll\\user.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|c:\\users\\corom\\onedrive\\escritorio\\stockpro\\stockpro\\qa2\\stockpro (2)\\stockpro\\proyecto final inventario\\proyecto final inventario\\dll\\reportesloggin.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\dll\\reportesloggin.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\interfaces\\iinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\interfaces\\iinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\logica\\manejocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\logica\\manejocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\dll\\categorias.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\dll\\categorias.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\dll\\products.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\dll\\products.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\entidades\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\entidades\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\dll\\logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\dll\\logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\logica\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\logica\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\logica\\crearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\logica\\crearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\logica\\manejarinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\logica\\manejarinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\entidades\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\entidades\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucacerdemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucacerdemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\logica\\creacionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\logica\\creacionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\logica\\manejoreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\logica\\manejoreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\interfaces\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\interfaces\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\entidades\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\entidades\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\entidades\\categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\entidades\\categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\interfaces\\icategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\interfaces\\icategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucacerdemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucacerdemi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\ucreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\ucreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearcategoria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearcategoria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\proyecto final inventario\\pl\\uccrearproducto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E350294C-076B-44ED-8EFC-F6A668A34DD6}|Proyecto Final Inventario\\Proyecto Final Inventario.csproj|solutionrelative:proyecto final inventario\\pl\\uccrearproducto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Categorias.txt",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\Categorias.txt",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\DLL\\Categorias.txt",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\Categorias.txt",
+              "RelativeToolTip": "Proyecto Final Inventario\\DLL\\Categorias.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-07T05:44:57.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Log.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Log.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Entidades\\Log.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Log.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Entidades\\Log.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T05:11:00.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Products.txt",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\Products.txt",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\DLL\\Products.txt",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\Products.txt",
+              "RelativeToolTip": "Proyecto Final Inventario\\DLL\\Products.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-07T05:44:55.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Iinventario.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\Iinventario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Interfaces\\Iinventario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\Iinventario.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Interfaces\\Iinventario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:48:19.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\IUsuario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Interfaces\\IUsuario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\IUsuario.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Interfaces\\IUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T19:18:01.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportesLoggin.txt",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\ReportesLoggin.txt",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\DLL\\ReportesLoggin.txt",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\ReportesLoggin.txt",
+              "RelativeToolTip": "Proyecto Final Inventario\\DLL\\ReportesLoggin.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-08T22:34:05.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.txt",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\User.txt",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\DLL\\User.txt",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\User.txt",
+              "RelativeToolTip": "Proyecto Final Inventario\\DLL\\User.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-07T07:21:40.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManejoCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\ManejoCategoria.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Logica\\ManejoCategoria.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\ManejoCategoria.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Logica\\ManejoCategoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:49:57.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Logs.txt",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\Logs.txt",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\DLL\\Logs.txt",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\DLL\\Logs.txt",
+              "RelativeToolTip": "Proyecto Final Inventario\\DLL\\Logs.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-08T05:20:47.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UCcrearCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCcrearCategoria.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCcrearCategoria.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCcrearCategoria.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCcrearCategoria.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAewDYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:35:59.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UCcrearCategoria.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCcrearCategoria.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCcrearCategoria.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Downloads\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCcrearCategoria.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Administrator\\Downloads\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCcrearCategoria.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:58:47.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\UserManager.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Logica\\UserManager.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\UserManager.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Logica\\UserManager.cs",
+              "ViewState": "AgIAAAIAAABAMzMzM3MvwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T07:22:49.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CrearProducto.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\CrearProducto.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Logica\\CrearProducto.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\CrearProducto.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Logica\\CrearProducto.cs",
+              "ViewState": "AgIAAHQAAAAAwJmZmZm5v4MAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T06:13:51.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ManejarInventario.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\ManejarInventario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Logica\\ManejarInventario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\ManejarInventario.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Logica\\ManejarInventario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:50:40.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Inventario.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Inventario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Entidades\\Inventario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Inventario.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Entidades\\Inventario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:36:30.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UCCrear.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrear.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCCrear.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Downloads\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrear.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Administrator\\Downloads\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrear.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:32:13.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Program.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Program.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Program.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T07:23:12.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UCCrear.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrear.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCCrear.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrear.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCCrear.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T03:08:28.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FrmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\FrmLogin.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Downloads\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmLogin.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Administrator\\Downloads\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T22:21:04.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FrmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\FrmInicio.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmInicio.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\FrmInicio.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAkwL8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T06:12:54.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FrmInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\FrmInicio.cs",
+              "ToolTip": "C:\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmInicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmInicio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T06:12:49.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UCAcerdemi.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCAcerdemi.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCAcerdemi.cs",
+              "ToolTip": "C:\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCAcerdemi.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCAcerdemi.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T23:22:18.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UCInventario.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInventario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCInventario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInventario.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCInventario.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAMwDQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T06:28:45.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreacionUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\CreacionUsuario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Logica\\CreacionUsuario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\CreacionUsuario.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Logica\\CreacionUsuario.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T07:01:14.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ManejoReporte.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\ManejoReporte.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Logica\\ManejoReporte.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Logica\\ManejoReporte.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Logica\\ManejoReporte.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T23:21:29.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IProduct.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\IProduct.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Interfaces\\IProduct.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\IProduct.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Interfaces\\IProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T00:13:49.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Usuarios.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Entidades\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Usuarios.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Entidades\\Usuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T19:18:06.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Productos.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Productos.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Entidades\\Productos.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Productos.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Entidades\\Productos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:05:24.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Categorias.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Categorias.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Entidades\\Categorias.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Entidades\\Categorias.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Entidades\\Categorias.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:58:28.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ICategoria.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\ICategoria.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\Interfaces\\ICategoria.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\Interfaces\\ICategoria.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\Interfaces\\ICategoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:35:40.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UCCrearUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearUsuario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCCrearUsuario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T06:09:11.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UCInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInicio.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCInicio.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInicio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T07:24:03.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UCInicio.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInicio.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCInicio.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInicio.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCInicio.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T19:12:33.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UCInventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInventario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCInventario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Documentos\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Documentos\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCInventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T22:16:56.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UCAcerdemi.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCAcerdemi.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCAcerdemi.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCAcerdemi.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCAcerdemi.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T23:47:34.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UCCrearProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearProducto.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCCrearProducto.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearProducto.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:49:31.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UCCrearUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearUsuario.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCCrearUsuario.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearUsuario.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCCrearUsuario.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T07:12:54.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "FrmInicio.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmInicio.Designer.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\FrmInicio.Designer.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmInicio.Designer.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\FrmInicio.Designer.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAAAEcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T22:49:44.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "FrmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\FrmLogin.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\FrmLogin.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\FrmLogin.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAUwFgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T22:11:15.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UCReporte.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCReporte.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCReporte.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCReporte.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCReporte.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T00:39:22.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UCReporte.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCReporte.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCReporte.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCReporte.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCReporte.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T00:45:26.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UCcrearCategoria.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCcrearCategoria.Designer.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCcrearCategoria.Designer.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCcrearCategoria.Designer.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCcrearCategoria.Designer.cs",
+              "ViewState": "AgIAACIBAAAAAAAAAADgvywBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T17:53:34.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UCCrearProducto.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearProducto.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCCrearProducto.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearProducto.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCCrearProducto.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAwwMQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T18:01:54.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UCCrearProducto.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearProducto.Designer.cs",
+              "RelativeDocumentMoniker": "Proyecto Final Inventario\\PL\\UCCrearProducto.Designer.cs",
+              "ToolTip": "C:\\Users\\corom\\OneDrive\\Escritorio\\StockPro\\StockPro\\QA2\\StockPro (2)\\StockPro\\Proyecto Final Inventario\\Proyecto Final Inventario\\PL\\UCCrearProducto.Designer.cs",
+              "RelativeToolTip": "Proyecto Final Inventario\\PL\\UCCrearProducto.Designer.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAiwLkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:54:02.751Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
