@@ -16,7 +16,6 @@ namespace Proyecto_Final_Inventario
     {
         public int IDProductos { get; set; }
         public string Nombre { get; set; }
-        public string Categoria { get; set; }  // nombre de la categoría
         public int IDCategorias { get; set; }
         public string Proveedor { get; set; }
         public Nullable<int> Cantidad_Inicial { get; set; }
