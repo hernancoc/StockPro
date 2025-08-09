@@ -52,8 +52,7 @@
             // 
             this.LblCrearUsuario.BackColor = System.Drawing.Color.Transparent;
             this.LblCrearUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCrearUsuario.Location = new System.Drawing.Point(385, 20);
-            this.LblCrearUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.LblCrearUsuario.Location = new System.Drawing.Point(578, 31);
             this.LblCrearUsuario.Name = "LblCrearUsuario";
             this.LblCrearUsuario.Size = new System.Drawing.Size(384, 48);
             this.LblCrearUsuario.TabIndex = 63;
@@ -65,8 +64,7 @@
             this.LblNombreUsuario.BackColor = System.Drawing.Color.Transparent;
             this.LblNombreUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombreUsuario.ForeColor = System.Drawing.Color.Green;
-            this.LblNombreUsuario.Location = new System.Drawing.Point(129, 137);
-            this.LblNombreUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.LblNombreUsuario.Location = new System.Drawing.Point(194, 211);
             this.LblNombreUsuario.Name = "LblNombreUsuario";
             this.LblNombreUsuario.Size = new System.Drawing.Size(193, 25);
             this.LblNombreUsuario.TabIndex = 65;
@@ -86,14 +84,14 @@
             this.TxtNombreUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombreUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNombreUsuario.Location = new System.Drawing.Point(129, 170);
-            this.TxtNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.TxtNombreUsuario.Location = new System.Drawing.Point(194, 262);
+            this.TxtNombreUsuario.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.TxtNombreUsuario.MaxLength = 30;
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.TxtNombreUsuario.PlaceholderText = "";
             this.TxtNombreUsuario.SelectedText = "";
-            this.TxtNombreUsuario.Size = new System.Drawing.Size(254, 42);
+            this.TxtNombreUsuario.Size = new System.Drawing.Size(381, 65);
             this.TxtNombreUsuario.TabIndex = 64;
             this.TxtNombreUsuario.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -102,8 +100,7 @@
             this.LblContrasena.BackColor = System.Drawing.Color.Transparent;
             this.LblContrasena.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblContrasena.ForeColor = System.Drawing.Color.Green;
-            this.LblContrasena.Location = new System.Drawing.Point(129, 244);
-            this.LblContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.LblContrasena.Location = new System.Drawing.Point(194, 375);
             this.LblContrasena.Name = "LblContrasena";
             this.LblContrasena.Size = new System.Drawing.Size(117, 25);
             this.LblContrasena.TabIndex = 67;
@@ -123,14 +120,14 @@
             this.TxtContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtContraseña.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtContraseña.Location = new System.Drawing.Point(129, 277);
-            this.TxtContraseña.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.TxtContraseña.Location = new System.Drawing.Point(194, 426);
+            this.TxtContraseña.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.TxtContraseña.MaxLength = 30;
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.TxtContraseña.PlaceholderText = "";
             this.TxtContraseña.SelectedText = "";
-            this.TxtContraseña.Size = new System.Drawing.Size(254, 42);
+            this.TxtContraseña.Size = new System.Drawing.Size(381, 65);
             this.TxtContraseña.TabIndex = 66;
             this.TxtContraseña.TextOffset = new System.Drawing.Point(8, 0);
             this.TxtContraseña.UseSystemPasswordChar = true;
@@ -140,8 +137,7 @@
             this.LblConfirmarContraseña.BackColor = System.Drawing.Color.Transparent;
             this.LblConfirmarContraseña.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblConfirmarContraseña.ForeColor = System.Drawing.Color.Green;
-            this.LblConfirmarContraseña.Location = new System.Drawing.Point(129, 365);
-            this.LblConfirmarContraseña.Margin = new System.Windows.Forms.Padding(2);
+            this.LblConfirmarContraseña.Location = new System.Drawing.Point(194, 562);
             this.LblConfirmarContraseña.Name = "LblConfirmarContraseña";
             this.LblConfirmarContraseña.Size = new System.Drawing.Size(221, 25);
             this.LblConfirmarContraseña.TabIndex = 69;
@@ -161,14 +157,14 @@
             this.TxtContraseña2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtContraseña2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContraseña2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtContraseña2.Location = new System.Drawing.Point(129, 398);
-            this.TxtContraseña2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.TxtContraseña2.Location = new System.Drawing.Point(194, 612);
+            this.TxtContraseña2.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.TxtContraseña2.MaxLength = 30;
             this.TxtContraseña2.Name = "TxtContraseña2";
             this.TxtContraseña2.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.TxtContraseña2.PlaceholderText = "";
             this.TxtContraseña2.SelectedText = "";
-            this.TxtContraseña2.Size = new System.Drawing.Size(254, 42);
+            this.TxtContraseña2.Size = new System.Drawing.Size(381, 65);
             this.TxtContraseña2.TabIndex = 68;
             this.TxtContraseña2.TextOffset = new System.Drawing.Point(8, 0);
             this.TxtContraseña2.UseSystemPasswordChar = true;
@@ -189,10 +185,9 @@
             this.BtnCrearUsuario.ForeColor = System.Drawing.Color.White;
             this.BtnCrearUsuario.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(211)))), ((int)(((byte)(159)))));
             this.BtnCrearUsuario.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(192)))), ((int)(((byte)(145)))));
-            this.BtnCrearUsuario.Location = new System.Drawing.Point(105, 524);
-            this.BtnCrearUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCrearUsuario.Location = new System.Drawing.Point(158, 806);
             this.BtnCrearUsuario.Name = "BtnCrearUsuario";
-            this.BtnCrearUsuario.Size = new System.Drawing.Size(310, 58);
+            this.BtnCrearUsuario.Size = new System.Drawing.Size(465, 89);
             this.BtnCrearUsuario.TabIndex = 70;
             this.BtnCrearUsuario.Text = "Crear Usuario";
             this.BtnCrearUsuario.TextOffset = new System.Drawing.Point(0, -2);
@@ -204,7 +199,8 @@
             this.CbActivar.BackColor = System.Drawing.Color.White;
             this.CbActivar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbActivar.ForeColor = System.Drawing.Color.DarkGreen;
-            this.CbActivar.Location = new System.Drawing.Point(156, 478);
+            this.CbActivar.Location = new System.Drawing.Point(234, 735);
+            this.CbActivar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CbActivar.Name = "CbActivar";
             this.CbActivar.Size = new System.Drawing.Size(194, 29);
             this.CbActivar.TabIndex = 96;
@@ -221,9 +217,10 @@
             this.BtnActivar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(156)))), ((int)(((byte)(61)))));
             this.BtnActivar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActivar.ForeColor = System.Drawing.Color.White;
-            this.BtnActivar.Location = new System.Drawing.Point(601, 478);
+            this.BtnActivar.Location = new System.Drawing.Point(902, 735);
+            this.BtnActivar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnActivar.Name = "BtnActivar";
-            this.BtnActivar.Size = new System.Drawing.Size(122, 36);
+            this.BtnActivar.Size = new System.Drawing.Size(183, 55);
             this.BtnActivar.TabIndex = 100;
             this.BtnActivar.Text = "Activar";
             this.BtnActivar.Visible = false;
@@ -239,9 +236,10 @@
             this.BtnDesactivar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(156)))), ((int)(((byte)(61)))));
             this.BtnDesactivar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDesactivar.ForeColor = System.Drawing.Color.White;
-            this.BtnDesactivar.Location = new System.Drawing.Point(858, 478);
+            this.BtnDesactivar.Location = new System.Drawing.Point(1287, 735);
+            this.BtnDesactivar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnDesactivar.Name = "BtnDesactivar";
-            this.BtnDesactivar.Size = new System.Drawing.Size(122, 36);
+            this.BtnDesactivar.Size = new System.Drawing.Size(183, 55);
             this.BtnDesactivar.TabIndex = 99;
             this.BtnDesactivar.Text = "Desactivar";
             this.BtnDesactivar.Visible = false;
@@ -277,14 +275,15 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVUsuario.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVUsuario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(200)))));
-            this.DGVUsuario.Location = new System.Drawing.Point(554, 108);
+            this.DGVUsuario.Location = new System.Drawing.Point(831, 166);
+            this.DGVUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVUsuario.MultiSelect = false;
             this.DGVUsuario.Name = "DGVUsuario";
             this.DGVUsuario.ReadOnly = true;
             this.DGVUsuario.RowHeadersVisible = false;
             this.DGVUsuario.RowHeadersWidth = 62;
             this.DGVUsuario.RowTemplate.Height = 30;
-            this.DGVUsuario.Size = new System.Drawing.Size(468, 298);
+            this.DGVUsuario.Size = new System.Drawing.Size(702, 458);
             this.DGVUsuario.TabIndex = 101;
             this.DGVUsuario.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DGVUsuario.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -308,7 +307,6 @@
             this.DGVUsuario.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
             this.DGVUsuario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DGVUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuario_CellContentClick);
-            this.DGVUsuario.Click += new System.EventHandler(this.DGVUsuario_Click);
             // 
             // BtnVerclave2
             // 
@@ -320,12 +318,11 @@
             this.BtnVerclave2.ImageOffset = new System.Drawing.Point(0, 0);
             this.BtnVerclave2.ImageRotate = 0F;
             this.BtnVerclave2.ImageSize = new System.Drawing.Size(24, 24);
-            this.BtnVerclave2.Location = new System.Drawing.Point(391, 407);
-            this.BtnVerclave2.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnVerclave2.Location = new System.Drawing.Point(586, 626);
             this.BtnVerclave2.Name = "BtnVerclave2";
             this.BtnVerclave2.PressedState.Image = global::Proyecto_Final_Inventario.Properties.Resources._14777;
             this.BtnVerclave2.PressedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.BtnVerclave2.Size = new System.Drawing.Size(24, 23);
+            this.BtnVerclave2.Size = new System.Drawing.Size(36, 35);
             this.BtnVerclave2.TabIndex = 98;
             this.BtnVerclave2.UseTransparentBackground = true;
             this.BtnVerclave2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnVerclave2_MouseDown);
@@ -341,12 +338,11 @@
             this.BtnVerclave1.ImageOffset = new System.Drawing.Point(0, 0);
             this.BtnVerclave1.ImageRotate = 0F;
             this.BtnVerclave1.ImageSize = new System.Drawing.Size(24, 24);
-            this.BtnVerclave1.Location = new System.Drawing.Point(391, 285);
-            this.BtnVerclave1.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnVerclave1.Location = new System.Drawing.Point(586, 438);
             this.BtnVerclave1.Name = "BtnVerclave1";
             this.BtnVerclave1.PressedState.Image = global::Proyecto_Final_Inventario.Properties.Resources._14777;
             this.BtnVerclave1.PressedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.BtnVerclave1.Size = new System.Drawing.Size(24, 23);
+            this.BtnVerclave1.Size = new System.Drawing.Size(36, 35);
             this.BtnVerclave1.TabIndex = 97;
             this.BtnVerclave1.UseTransparentBackground = true;
             this.BtnVerclave1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnVerclave1_MouseDown);
@@ -354,7 +350,7 @@
             // 
             // UCCrearUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.DGVUsuario);
@@ -371,8 +367,9 @@
             this.Controls.Add(this.LblNombreUsuario);
             this.Controls.Add(this.TxtNombreUsuario);
             this.Controls.Add(this.LblCrearUsuario);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UCCrearUsuario";
-            this.Size = new System.Drawing.Size(1047, 596);
+            this.Size = new System.Drawing.Size(1570, 917);
             this.Load += new System.EventHandler(this.UCCrearUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuario)).EndInit();
             this.ResumeLayout(false);

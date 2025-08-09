@@ -1,139 +1,156 @@
-﻿using Proyecto_Final_Inventario.Entidades;
-using Proyecto_Final_Inventario.Interfaces;
+﻿using Proyecto_Final_Inventario.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Proyecto_Final_Inventario.Logica
 {
-    internal class ManejoCategoria : Categorias, ICategoria
+    internal class ManejoCategoria : ICategoria, IDisposable
     {
-        string RutaArchivo = @"DLL\Categorias.txt";
+        private readonly STOCKPROEntities db = new STOCKPROEntities();
 
         public void CrearCategoria(Categorias categoria)
         {
+            if (categoria == null)
+            {
+                MessageBox.Show("La categoría no puede ser nula");
+                return;
+            }
+
             try
             {
-                foreach (var line in File.ReadAllLines(RutaArchivo))
-                {
-                    var dividir = line.Split('|');
+                bool existe = db.Categorias
+                    .Any(c => c.Nombre.Trim().Equals(categoria.Nombre.Trim(), StringComparison.OrdinalIgnoreCase));
 
-                    // Comparación segura y limpia para evitar duplicados
-                    if (categoria._NombreCateg.Trim().Equals(dividir[0].Trim(), StringComparison.OrdinalIgnoreCase))
+                if (existe)
+                {
+                    MessageBox.Show("Esta categoría ya existe");
+                    return;
+                }
+
+                var nuevaCategoria = new Categorias
+                {
+                    Nombre = categoria.Nombre.Trim(),
+                    Descripcion = categoria.Descripcion?.Trim() ?? string.Empty,
+                    Estado = string.IsNullOrEmpty(categoria.Estado) ? "T" : categoria.Estado,
+                    FechaCreacion = categoria.FechaCreacion ?? DateTime.Now
+                };
+
+                db.Categorias.Add(nuevaCategoria);
+                db.SaveChanges();
+
+                MessageBox.Show("Categoría creada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al crear la categoría: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // NUEVO método para editar categoría
+        public void EditarCategoria(string nombreOriginal, Categorias categoriaEditada)
+        {
+            try
+            {
+                var categoria = db.Categorias.FirstOrDefault(c => c.Nombre == nombreOriginal);
+                if (categoria == null)
+                {
+                    MessageBox.Show("No se encontró la categoría para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validar si el nuevo nombre ya existe (y no es el mismo registro)
+                if (!categoria.Nombre.Equals(categoriaEditada.Nombre.Trim(), StringComparison.OrdinalIgnoreCase))
+                {
+                    bool nombreRepetido = db.Categorias
+                        .Any(c => c.Nombre.Trim().Equals(categoriaEditada.Nombre.Trim(), StringComparison.OrdinalIgnoreCase));
+                    if (nombreRepetido)
                     {
-                        MessageBox.Show("Esta Categoria ya existe");
+                        MessageBox.Show("Ya existe una categoría con ese nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
 
-                // Guardar la fecha en formato "d/M/yyyy" para compatibilidad con el parseo
-                string fechaFormateada = categoria._FechaCrea.ToString("d/M/yyyy");
+                categoria.Nombre = categoriaEditada.Nombre.Trim();
+                categoria.Descripcion = categoriaEditada.Descripcion?.Trim() ?? string.Empty;
+                categoria.Estado = string.IsNullOrEmpty(categoriaEditada.Estado) ? "T" : categoriaEditada.Estado;
+                categoria.FechaCreacion = categoriaEditada.FechaCreacion ?? categoria.FechaCreacion;
 
-                string linea = $"{categoria._NombreCateg.Trim()}|{categoria._Descripcion.Trim()}|{categoria._EstadoCateg}|{fechaFormateada}";
+                db.SaveChanges();
 
-                File.AppendAllText(RutaArchivo, linea + Environment.NewLine);
+                MessageBox.Show("Categoría actualizada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al editar la categoría: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public List<Categorias> CargarCategorias()
         {
-            List<Categorias> listacategoria = new List<Categorias>();
-
             try
             {
-                CultureInfo cultura = new CultureInfo("es-DO");
-
-                foreach (var linea in File.ReadLines(RutaArchivo))
-                {
-                    var dividir = linea.Split('|');
-
-                    if (dividir.Length < 4)
-                    {
-                        Console.WriteLine($"Línea inválida o incompleta: {linea}");
-                        continue;
-                    }
-
-                    try
-                    {
-                        Categorias categorias = new Categorias
-                        {
-                            _NombreCateg = dividir[0].Trim(),
-                            _Descripcion = dividir[1].Trim(),
-                            _EstadoCateg = Convert.ToBoolean(dividir[2].Trim()),
-                            _FechaCrea = DateTime.ParseExact(dividir[3].Trim(), "d/M/yyyy", cultura)
-                        };
-
-                        listacategoria.Add(categorias);
-                    }
-                    catch (FormatException fex)
-                    {
-                        Console.WriteLine($"Error al parsear fecha en línea: {linea} - {fex.Message}");
-                    }
-                }
+                return db.Categorias.ToList();
             }
             catch (Exception ex)
             {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar categorías: " + ex.Message);
+                return new List<Categorias>();
             }
-
-            return listacategoria;
         }
 
         public List<string> CargarCombobox()
         {
-            List<string> listacategoria = new List<string>();
-            foreach (var line in File.ReadAllLines(RutaArchivo))
+            try
             {
-                var dividir = line.Split('|');
-                if (dividir.Length >= 3 && dividir[2].Trim().Equals("True", StringComparison.OrdinalIgnoreCase))
-                {
-                    listacategoria.Add(dividir[0].Trim());
-                }
+                return db.Categorias
+                    .Where(c => c.Estado == "T")
+                    .Select(c => c.Nombre)
+                    .ToList();
             }
-
-            return listacategoria;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar categorías para ComboBox: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<string>();
+            }
         }
 
-        public void Activar(string fila, string nombre)
+        public void Activar(string nombre)
         {
-            List<string> ListaModificada = new List<string>();
-
-            foreach (var linea in File.ReadLines(RutaArchivo))
-            {
-                var dividir = linea.Split('|');
-
-                if (dividir.Length >= 1 && nombre.Trim().Equals(dividir[0].Trim(), StringComparison.OrdinalIgnoreCase))
-                {
-                    dividir[2] = "True";
-                }
-                ListaModificada.Add(string.Join("|", dividir));
-            }
-            File.WriteAllLines(RutaArchivo, ListaModificada);
+            CambiarEstadoCategoria(nombre, "T", "activar");
         }
 
-        public void Desactivar(string fila, string nombre)
+        public void Desactivar(string nombre)
         {
-            List<string> ListaModificada = new List<string>();
+            CambiarEstadoCategoria(nombre, "F", "desactivar");
+        }
 
-            foreach (var linea in File.ReadLines(RutaArchivo))
+        private void CambiarEstadoCategoria(string nombre, string estado, string accion)
+        {
+            try
             {
-                var dividir = linea.Split('|');
-
-                if (dividir.Length >= 1 && nombre.Trim().Equals(dividir[0].Trim(), StringComparison.OrdinalIgnoreCase))
+                var categoria = db.Categorias.FirstOrDefault(c => c.Nombre == nombre);
+                if (categoria == null)
                 {
-                    dividir[2] = "False";
+                    MessageBox.Show($"No se encontró la categoría para {accion}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
-                ListaModificada.Add(string.Join("|", dividir));
+
+                categoria.Estado = estado;
+                db.SaveChanges();
+
+                MessageBox.Show($"Categoría {accion}da exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            File.WriteAllLines(RutaArchivo, ListaModificada);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al {accion} la categoría: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Dispose()
+        {
+            db.Dispose();
         }
     }
 }

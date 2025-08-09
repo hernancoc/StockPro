@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Proyecto_Final_Inventario.Entidades;
 
 namespace Proyecto_Final_Inventario.Interfaces
 {
-    internal interface Iinventario
+    public interface Iinventario
     {
-        void Entrada(string IDActual, int NuevaCantidad);
-        void Salida(string IDActual, int NuevaCantidad);
-        List<Inventario> LeerProductos();
-        void Activar(string row, string id);
-        void Desactivar(string row, string id);
-        List<Inventario> filtrar(string texto);
-
+        void Entrada(int idProducto, int nuevaCantidad);
+        void Salida(int idProducto, int cantidadSalida);
+        List<Productos> LeerProductos();
+        void Activar(int idProducto);
+        void Desactivar(int idProducto);
+        List<Productos> Filtrar(string texto);
+        List<Productos> FiltroCategoria(string texto);
     }
 }
+

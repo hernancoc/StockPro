@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NUDEntrada_Salida = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.CBDesactivar = new System.Windows.Forms.CheckBox();
             this.DGVInventario = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -61,15 +61,15 @@
             this.NUDEntrada_Salida.FocusedState.BorderColor = System.Drawing.Color.DarkGreen;
             this.NUDEntrada_Salida.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUDEntrada_Salida.ForeColor = System.Drawing.Color.ForestGreen;
-            this.NUDEntrada_Salida.Location = new System.Drawing.Point(550, 29);
-            this.NUDEntrada_Salida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.NUDEntrada_Salida.Location = new System.Drawing.Point(825, 42);
+            this.NUDEntrada_Salida.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.NUDEntrada_Salida.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.NUDEntrada_Salida.Name = "NUDEntrada_Salida";
-            this.NUDEntrada_Salida.Size = new System.Drawing.Size(70, 36);
+            this.NUDEntrada_Salida.Size = new System.Drawing.Size(105, 55);
             this.NUDEntrada_Salida.TabIndex = 54;
             this.NUDEntrada_Salida.UpDownButtonFillColor = System.Drawing.Color.ForestGreen;
             this.NUDEntrada_Salida.UpDownButtonForeColor = System.Drawing.Color.White;
@@ -81,7 +81,8 @@
             this.CBDesactivar.BackColor = System.Drawing.Color.White;
             this.CBDesactivar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBDesactivar.ForeColor = System.Drawing.Color.DarkGreen;
-            this.CBDesactivar.Location = new System.Drawing.Point(20, 29);
+            this.CBDesactivar.Location = new System.Drawing.Point(30, 45);
+            this.CBDesactivar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBDesactivar.Name = "CBDesactivar";
             this.CBDesactivar.Size = new System.Drawing.Size(131, 29);
             this.CBDesactivar.TabIndex = 58;
@@ -95,38 +96,39 @@
             this.DGVInventario.AllowUserToDeleteRows = false;
             this.DGVInventario.AllowUserToResizeColumns = false;
             this.DGVInventario.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            this.DGVInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            this.DGVInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.DGVInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.DGVInventario.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVInventario.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVInventario.DefaultCellStyle = dataGridViewCellStyle18;
             this.DGVInventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(200)))));
-            this.DGVInventario.Location = new System.Drawing.Point(17, 193);
+            this.DGVInventario.Location = new System.Drawing.Point(26, 297);
+            this.DGVInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVInventario.MultiSelect = false;
             this.DGVInventario.Name = "DGVInventario";
             this.DGVInventario.ReadOnly = true;
             this.DGVInventario.RowHeadersVisible = false;
             this.DGVInventario.RowHeadersWidth = 62;
             this.DGVInventario.RowTemplate.Height = 30;
-            this.DGVInventario.Size = new System.Drawing.Size(1000, 400);
+            this.DGVInventario.Size = new System.Drawing.Size(1500, 615);
             this.DGVInventario.TabIndex = 94;
             this.DGVInventario.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DGVInventario.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -150,8 +152,7 @@
             this.DGVInventario.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
             this.DGVInventario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DGVInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInventario_CellContentClick);
-            this.DGVInventario.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DGVInventario_DataBindingComplete_1);
-            this.DGVInventario.Click += new System.EventHandler(this.DGVInventario_Click_1);
+            this.DGVInventario.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInventario_CellContentDoubleClick);
             // 
             // CbActivar
             // 
@@ -159,13 +160,15 @@
             this.CbActivar.BackColor = System.Drawing.Color.White;
             this.CbActivar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbActivar.ForeColor = System.Drawing.Color.DarkGreen;
-            this.CbActivar.Location = new System.Drawing.Point(20, 29);
+            this.CbActivar.Location = new System.Drawing.Point(30, 45);
+            this.CbActivar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CbActivar.Name = "CbActivar";
             this.CbActivar.Size = new System.Drawing.Size(104, 29);
             this.CbActivar.TabIndex = 95;
             this.CbActivar.Text = "Habilitar";
             this.CbActivar.UseVisualStyleBackColor = true;
             this.CbActivar.Visible = false;
+            this.CbActivar.CheckedChanged += new System.EventHandler(this.CbActivar_CheckedChanged);
             // 
             // TxtFiltrar
             // 
@@ -182,12 +185,12 @@
             this.TxtFiltrar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtFiltrar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFiltrar.Location = new System.Drawing.Point(467, 104);
-            this.TxtFiltrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtFiltrar.Location = new System.Drawing.Point(700, 160);
+            this.TxtFiltrar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.TxtFiltrar.Name = "TxtFiltrar";
             this.TxtFiltrar.PlaceholderText = "Filtrar";
             this.TxtFiltrar.SelectedText = "";
-            this.TxtFiltrar.Size = new System.Drawing.Size(328, 60);
+            this.TxtFiltrar.Size = new System.Drawing.Size(492, 92);
             this.TxtFiltrar.TabIndex = 98;
             this.TxtFiltrar.TextChanged += new System.EventHandler(this.TxtFiltrar_TextChanged);
             // 
@@ -196,7 +199,8 @@
             this.RBrojo.AutoSize = true;
             this.RBrojo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.RBrojo.ForeColor = System.Drawing.Color.Red;
-            this.RBrojo.Location = new System.Drawing.Point(17, 89);
+            this.RBrojo.Location = new System.Drawing.Point(26, 137);
+            this.RBrojo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RBrojo.Name = "RBrojo";
             this.RBrojo.Size = new System.Drawing.Size(73, 29);
             this.RBrojo.TabIndex = 100;
@@ -210,7 +214,8 @@
             this.RBAmarillo.AutoSize = true;
             this.RBAmarillo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.RBAmarillo.ForeColor = System.Drawing.Color.Gold;
-            this.RBAmarillo.Location = new System.Drawing.Point(96, 89);
+            this.RBAmarillo.Location = new System.Drawing.Point(144, 137);
+            this.RBAmarillo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RBAmarillo.Name = "RBAmarillo";
             this.RBAmarillo.Size = new System.Drawing.Size(103, 29);
             this.RBAmarillo.TabIndex = 101;
@@ -224,7 +229,8 @@
             this.RBverde.AutoSize = true;
             this.RBverde.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.RBverde.ForeColor = System.Drawing.Color.Green;
-            this.RBverde.Location = new System.Drawing.Point(199, 89);
+            this.RBverde.Location = new System.Drawing.Point(298, 137);
+            this.RBverde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RBverde.Name = "RBverde";
             this.RBverde.Size = new System.Drawing.Size(82, 29);
             this.RBverde.TabIndex = 102;
@@ -237,7 +243,8 @@
             // 
             this.RbTodos.AutoSize = true;
             this.RbTodos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.RbTodos.Location = new System.Drawing.Point(287, 89);
+            this.RbTodos.Location = new System.Drawing.Point(430, 137);
+            this.RbTodos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RbTodos.Name = "RbTodos";
             this.RbTodos.Size = new System.Drawing.Size(85, 29);
             this.RbTodos.TabIndex = 103;
@@ -252,13 +259,13 @@
             this.RbActivos.BackColor = System.Drawing.Color.White;
             this.RbActivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbActivos.ForeColor = System.Drawing.Color.DarkGreen;
-            this.RbActivos.Location = new System.Drawing.Point(28, 146);
+            this.RbActivos.Location = new System.Drawing.Point(42, 225);
+            this.RbActivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RbActivos.Name = "RbActivos";
             this.RbActivos.Size = new System.Drawing.Size(96, 29);
             this.RbActivos.TabIndex = 106;
             this.RbActivos.Text = "Activos";
             this.RbActivos.UseVisualStyleBackColor = true;
-            this.RbActivos.CheckedChanged += new System.EventHandler(this.RbActivos_CheckedChanged_1);
             // 
             // RbDesactivos
             // 
@@ -266,7 +273,8 @@
             this.RbDesactivos.BackColor = System.Drawing.Color.White;
             this.RbDesactivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbDesactivos.ForeColor = System.Drawing.Color.DarkGreen;
-            this.RbDesactivos.Location = new System.Drawing.Point(149, 146);
+            this.RbDesactivos.Location = new System.Drawing.Point(224, 225);
+            this.RbDesactivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RbDesactivos.Name = "RbDesactivos";
             this.RbDesactivos.Size = new System.Drawing.Size(123, 29);
             this.RbDesactivos.TabIndex = 107;
@@ -279,12 +287,12 @@
             this.pbimagen.BackColor = System.Drawing.Color.Transparent;
             this.pbimagen.BorderRadius = 8;
             this.pbimagen.ImageRotate = 0F;
-            this.pbimagen.Location = new System.Drawing.Point(815, 3);
+            this.pbimagen.Location = new System.Drawing.Point(1222, 5);
+            this.pbimagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbimagen.Name = "pbimagen";
-            this.pbimagen.Size = new System.Drawing.Size(205, 155);
+            this.pbimagen.Size = new System.Drawing.Size(308, 238);
             this.pbimagen.TabIndex = 99;
             this.pbimagen.TabStop = false;
-            this.pbimagen.Click += new System.EventHandler(this.pbimagen_Click);
             // 
             // BtnGuardar
             // 
@@ -301,10 +309,11 @@
             this.BtnGuardar.Image = global::Proyecto_Final_Inventario.Properties.Resources.icons8_save_50;
             this.BtnGuardar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnGuardar.ImageSize = new System.Drawing.Size(24, 24);
-            this.BtnGuardar.Location = new System.Drawing.Point(168, 20);
+            this.BtnGuardar.Location = new System.Drawing.Point(252, 31);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(63)))));
-            this.BtnGuardar.Size = new System.Drawing.Size(135, 45);
+            this.BtnGuardar.Size = new System.Drawing.Size(202, 69);
             this.BtnGuardar.TabIndex = 97;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.TextOffset = new System.Drawing.Point(18, 0);
@@ -326,10 +335,11 @@
             this.BtnSalida.Image = global::Proyecto_Final_Inventario.Properties.Resources.icons8_subtraction_50;
             this.BtnSalida.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnSalida.ImageSize = new System.Drawing.Size(24, 24);
-            this.BtnSalida.Location = new System.Drawing.Point(643, 20);
+            this.BtnSalida.Location = new System.Drawing.Point(964, 31);
+            this.BtnSalida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnSalida.Name = "BtnSalida";
             this.BtnSalida.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(63)))));
-            this.BtnSalida.Size = new System.Drawing.Size(135, 45);
+            this.BtnSalida.Size = new System.Drawing.Size(202, 69);
             this.BtnSalida.TabIndex = 96;
             this.BtnSalida.Text = "Salida";
             this.BtnSalida.TextOffset = new System.Drawing.Point(18, 0);
@@ -351,10 +361,11 @@
             this.BtnEntrada.Image = global::Proyecto_Final_Inventario.Properties.Resources.icons8_plus_32;
             this.BtnEntrada.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnEntrada.ImageSize = new System.Drawing.Size(24, 24);
-            this.BtnEntrada.Location = new System.Drawing.Point(398, 20);
+            this.BtnEntrada.Location = new System.Drawing.Point(597, 31);
+            this.BtnEntrada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnEntrada.Name = "BtnEntrada";
             this.BtnEntrada.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(63)))));
-            this.BtnEntrada.Size = new System.Drawing.Size(135, 45);
+            this.BtnEntrada.Size = new System.Drawing.Size(202, 69);
             this.BtnEntrada.TabIndex = 1;
             this.BtnEntrada.Text = "Entrada";
             this.BtnEntrada.TextOffset = new System.Drawing.Point(18, 0);
@@ -374,17 +385,16 @@
             this.TxtCategoriaDeProducto.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TxtCategoriaDeProducto.ForeColor = System.Drawing.Color.Black;
             this.TxtCategoriaDeProducto.ItemHeight = 30;
-            this.TxtCategoriaDeProducto.Location = new System.Drawing.Point(278, 128);
+            this.TxtCategoriaDeProducto.Location = new System.Drawing.Point(417, 197);
+            this.TxtCategoriaDeProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtCategoriaDeProducto.Name = "TxtCategoriaDeProducto";
-            this.TxtCategoriaDeProducto.Size = new System.Drawing.Size(176, 36);
+            this.TxtCategoriaDeProducto.Size = new System.Drawing.Size(262, 36);
             this.TxtCategoriaDeProducto.TabIndex = 108;
             this.TxtCategoriaDeProducto.SelectedIndexChanged += new System.EventHandler(this.TxtCategoriaDeProducto_SelectedIndexChanged);
-            this.TxtCategoriaDeProducto.SelectionChangeCommitted += new System.EventHandler(this.TxtCategoriaDeProducto_SelectionChangeCommitted);
-            this.TxtCategoriaDeProducto.SelectedValueChanged += new System.EventHandler(this.TxtCategoriaDeProducto_SelectedValueChanged);
             // 
             // UCInventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.TxtCategoriaDeProducto);
@@ -404,8 +414,9 @@
             this.Controls.Add(this.NUDEntrada_Salida);
             this.Controls.Add(this.BtnEntrada);
             this.Location = new System.Drawing.Point(280, 80);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UCInventario";
-            this.Size = new System.Drawing.Size(1050, 650);
+            this.Size = new System.Drawing.Size(1575, 1000);
             this.Load += new System.EventHandler(this.UCInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NUDEntrada_Salida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVInventario)).EndInit();

@@ -13,4 +13,3 @@
 98|s24|electronico|samsung|2|35000|25000|False|ImagenesProductos\samsung.png|2025-07-08 19:00:00|2025-07-08 19:00:00
 95|vaso|plastico|plastifar|15|250|210|True|ImagenesProductos\Carro.png|2025-07-07 21:34:53|2025-07-08 00:05:33
 97|yipeta|comida|autozama|2|13555|1200|True|ImagenesProductos\samsung.png|2025-07-08 13:49:22|2025-07-08 13:49:22
-76|jabon|limpieza|dove|7|350|250|True|C:\Users\corom\OneDrive\Escritorio\Aprendiendo C#\Proyecto Final Inventario\Proyecto Final Inventario\ImagenesProductos\box-series-s.png|2025-07-19 15:02:54|2025-07-19 15:03:25

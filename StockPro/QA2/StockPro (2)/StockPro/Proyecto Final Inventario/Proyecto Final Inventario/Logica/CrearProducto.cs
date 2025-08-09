@@ -1,189 +1,154 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Proyecto_Final_Inventario.Entidades;
-using Proyecto_Final_Inventario.Interfaces;
+using System.Data.SqlClient;
+using Proyecto_Final_Inventario;
 
 namespace Proyecto_Final_Inventario.Logica
 {
-    public class CrearProducto: Productos, IProduct
+    public class CrearProducto
     {
-    
+        // Cambié el nombre del campo para evitar ambigüedad
+        private readonly string _connectionString = @"Server=DESKTOP-8OQ8KG1;Database=STOCKPRO;Trusted_Connection=True;";
 
-        string RutaProducts = @"DLL\Products.txt"; // ruta donde se alojaran los productos creados
-
-        public void CreacionProducto(Productos product)
+        // Crear producto en BD - NO usa IDProductos, se ignora si se manda
+        public void CreacionProducto(Productos producto)
         {
-            try {
-
-                int IdUnico = product._Id;
-                foreach (var line in File.ReadAllLines(RutaProducts)) {
-
-                    var dividir = line.Split('|');
-
-                    if (IdUnico == int.Parse(dividir[0]))
-                    {
-
-                        MessageBox.Show("El ID ingresado ya esta en uso ", "ID Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    if (_Nombre == (dividir[1]))
-                    {
-
-                        MessageBox.Show("El Producto ya existe", "Producto duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    product._FechaCreacion = DateTime.Now;
-                    product._FechaActualizacion = DateTime.Now;
-                }
-
-                product._FechaCreacion = DateTime.Now;
-                product._FechaActualizacion = DateTime.Now;
-                string fmt = "yyyy-MM-dd HH:mm:ss";
-                //crea la linea con los valores separados por |
-                string linea = $"{product._Id.ToString().Trim().ToLower()}|{product._Nombre.Trim().ToLower()}|{product._Categoria.Trim().ToLower()}|{product._Proveedor.ToString().Trim().ToLower()}|" +
-                               $"{product._Cantidad.ToString().Trim()}|{product._PrecioVenta.ToString().Trim()}|{product._PrecioCompra.ToString().Trim()}|{product._Activo.ToString().Trim()}|{product._UrlImagen.ToString()}|" +
-                               $"{product._FechaCreacion.ToString(fmt)}|{product._FechaActualizacion.ToString(fmt)}";
-
-                if (product._PrecioVenta < 0 || product._PrecioCompra < 0)
-                {
-                    MessageBox.Show("Los precios de venta y compra deben ser mayores o iguales a cero.", "Error de Precio", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                //A la ruta especificada agrega el producto + en una nueva linea
-                string todo = File.ReadAllText(RutaProducts);
-                if (!todo.EndsWith(Environment.NewLine))
-                {
-                    File.AppendAllText(RutaProducts, Environment.NewLine);
-                }
-
-                File.AppendAllText(RutaProducts, linea + Environment.NewLine);
-
-                MessageBox.Show("Producto creado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
+            // Validación: el IDProductos debe ser 0 o no asignado en creación
+            if (producto.IDProductos > 0)
             {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ArgumentException("No se debe asignar IDProductos al crear un nuevo producto.");
+            }
+
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                string query = @"
+                    INSERT INTO Productos 
+                    (Nombre, IDCategorias, Proveedor, Cantidad_Inicial, Precio_Venta, Precio_Compra, Estado, RutaImagenes, FechaCreacion, FechaActualizacion)
+                    VALUES
+                    (@Nombre, @IDCategorias, @Proveedor, @Cantidad_Inicial, @Precio_Venta, @Precio_Compra, @Estado, @RutaImagenes, @FechaCreacion, @FechaActualizacion)";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nombre", producto.Nombre ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@IDCategorias", producto.IDCategorias > 0 ? (object)producto.IDCategorias : DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Proveedor", producto.Proveedor ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@Cantidad_Inicial", producto.Cantidad_Inicial ?? 0);
+                    cmd.Parameters.AddWithValue("@Precio_Venta", producto.Precio_Venta);
+                    cmd.Parameters.AddWithValue("@Precio_Compra", producto.Precio_Compra);
+                    cmd.Parameters.AddWithValue("@Estado", producto.Estado ?? "F");
+                    cmd.Parameters.AddWithValue("@RutaImagenes", producto.RutaImagenes ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@FechaCreacion", producto.FechaCreacion ?? DateTime.Now);
+                    cmd.Parameters.AddWithValue("@FechaActualizacion", producto.FechaActualizacion ?? DateTime.Now);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
-        public void EditarProducto(Productos product)
+
+        // Editar producto en BD (usa IDProductos para identificar qué actualizar)
+        public void EditarProducto(Productos producto)
         {
-            try
+            using (SqlConnection con = new SqlConnection(_connectionString))
             {
-                List<string> lineasModificadas = new List<string>();
+                string query = @"
+                    UPDATE Productos SET
+                        Nombre = @Nombre,
+                        IDCategorias = @IDCategorias,
+                        Proveedor = @Proveedor,
+                        Cantidad_Inicial = @Cantidad_Inicial,
+                        Precio_Venta = @Precio_Venta,
+                        Precio_Compra = @Precio_Compra,
+                        Estado = @Estado,
+                        RutaImagenes = @RutaImagenes,
+                        FechaActualizacion = @FechaActualizacion
+                    WHERE IDProductos = @IDProductos";
 
-                foreach (var line in File.ReadAllLines(RutaProducts))
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    var dividir = line.Split('|');
+                    cmd.Parameters.AddWithValue("@Nombre", producto.Nombre ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@IDCategorias", producto.IDCategorias > 0 ? (object)producto.IDCategorias : DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Proveedor", producto.Proveedor ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@Cantidad_Inicial", producto.Cantidad_Inicial ?? 0);
+                    cmd.Parameters.AddWithValue("@Precio_Venta", producto.Precio_Venta);
+                    cmd.Parameters.AddWithValue("@Precio_Compra", producto.Precio_Compra);
+                    cmd.Parameters.AddWithValue("@Estado", producto.Estado ?? "F");
+                    cmd.Parameters.AddWithValue("@RutaImagenes", producto.RutaImagenes ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@FechaActualizacion", producto.FechaActualizacion ?? DateTime.Now);
+                    cmd.Parameters.AddWithValue("@IDProductos", producto.IDProductos);
 
-                    if (product._PrecioVenta < 0 || product._PrecioCompra < 0)
-                    {
-                        MessageBox.Show("Los precios de venta y compra deben ser mayores o iguales a cero.", "Error de Precio", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    _FechaActualizacion = DateTime.Now;
-                    string fmt = "yyyy-MM-dd HH:mm:ss";
-                    if (product._Id == int.Parse(dividir[0]))// Verifica si el ID coincide (es el producto que quiero editar)
-                    {
-                        string fechaCreacionOriginal = dividir[9];
-                        product._FechaActualizacion = DateTime.Now;
-                        // Si coincide, creo una nueva línea con los datos actualizados
-                        string nuevaLinea = $"{product._Id.ToString().Trim().ToLower()}|{product._Nombre.Trim().ToLower()}|{product._Categoria.Trim().ToLower()}|{product._Proveedor.ToString().Trim().ToLower()}|" +
-                                            $"{product._Cantidad.ToString().Trim()}|{product._PrecioVenta.ToString().Trim()}|{product._PrecioCompra.ToString().Trim()}|{product._Activo.ToString().Trim()}|{product._UrlImagen.ToString()}|" +
-                                            $"{fechaCreacionOriginal}|{product._FechaActualizacion.ToString(fmt)}";
+                    con.Open();
+                    int filasAfectadas = cmd.ExecuteNonQuery();
 
-                        lineasModificadas.Add(nuevaLinea);// Agrego la línea nueva (editada)
-                    }
-                    else
+                    if (filasAfectadas == 0)
                     {
-                        // Esta línea no se edita, así que se conserva tal cual
-                        lineasModificadas.Add(line);
+                        throw new Exception("No se encontró el producto para actualizar.");
                     }
                 }
-
-
-                string todo = File.ReadAllText(RutaProducts);
-                if (!todo.EndsWith(Environment.NewLine)) // si todo no acaba con en \n lo fuerza
-                {
-                    File.AppendAllText(RutaProducts, Environment.NewLine);
-                }
-                // Escribe todas las líneas (con la modificada) en el archivo
-                File.WriteAllLines(RutaProducts, lineasModificadas);
-                MessageBox.Show("Producto Editado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception ex)
-            {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
 
-
-        public static bool ValidarEditar(string ID)
+        // Buscar producto con JOIN para traer nombre de categoría
+        public Productos BuscarProductoConCategoria(string id)
         {
-            string RutaProducts = @"DLL\Products.txt"; // ruta donde se alojaran los productos creados
+            if (!int.TryParse(id, out int idProd))
+                return null;
 
-            bool x = false;
-            foreach (var linea in File.ReadLines(RutaProducts))
+            using (SqlConnection con = new SqlConnection(_connectionString))
             {
+                string query = @"
+                    SELECT p.*, c.Nombre AS NombreCategoria
+                    FROM Productos p
+                    LEFT JOIN Categorias c ON p.IDCategorias = c.IDCategorias
+                    WHERE p.IDProductos = @IDProductos";
 
-                var dividir = linea.Split('|');
-
-                if (dividir[0] == ID)
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    x= true;
-                    break;
-                }
-            }
-
-            return x;
-        }
-        
-        // Este método busca un producto en el archivo por su ID
-        public Productos BuscarProducto(string id)
-        {
-            try
-            {
-                // Recorro todas las líneas del archivo de productos
-                foreach (var linea in File.ReadLines(RutaProducts))
-                {
-                    var dividir = linea.Split('|'); // separo los campos por el |
-
-                    if (dividir[0] == id) // si el ID coincide con el que busco
+                    cmd.Parameters.AddWithValue("@IDProductos", idProd);
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        // retorno un objeto Productos con todos los valores llenos
-                        return new Productos
+                        if (reader.Read())
                         {
-                            _Id = int.Parse(dividir[0]),
-                            _Nombre = dividir[1],
-                            _Categoria = dividir[2],
-                            _Proveedor = dividir[3],
-                            _Cantidad = int.Parse(dividir[4]),
-                            _PrecioVenta = double.Parse(dividir[5]),
-                            _PrecioCompra = double.Parse(dividir[6]),
-                            _Activo = bool.Parse(dividir[7]),
-                            _UrlImagen = dividir[8],
-                            _FechaCreacion = DateTime.Parse(dividir[9]),
-                            _FechaActualizacion = DateTime.Parse(dividir[10])
-                        };
+                            return new Productos
+                            {
+                                IDProductos = (int)reader["IDProductos"],
+                                Nombre = reader["Nombre"].ToString(),
+                                IDCategorias = reader["IDCategorias"] == DBNull.Value ? 0 : Convert.ToInt32(reader["IDCategorias"]),
+                                Categoria = reader["NombreCategoria"]?.ToString() ?? string.Empty,
+                                Proveedor = reader["Proveedor"].ToString(),
+                                Cantidad_Inicial = reader["Cantidad_Inicial"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["Cantidad_Inicial"]),
+                                Precio_Venta = (decimal)reader["Precio_Venta"],
+                                Precio_Compra = (decimal)reader["Precio_Compra"],
+                                Estado = reader["Estado"].ToString(),
+                                RutaImagenes = reader["RutaImagenes"].ToString(),
+                                FechaCreacion = reader["FechaCreacion"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["FechaCreacion"]),
+                                FechaActualizacion = reader["FechaActualizacion"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["FechaActualizacion"])
+                            };
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return null;
         }
 
-    }       
+        // Validar si existe producto
+        public bool ValidarEditar(string id)
+        {
+            if (!int.TryParse(id, out int idProd))
+                return false;
+
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Productos WHERE IDProductos = @IDProductos";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@IDProductos", idProd);
+                    con.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+    }
 }

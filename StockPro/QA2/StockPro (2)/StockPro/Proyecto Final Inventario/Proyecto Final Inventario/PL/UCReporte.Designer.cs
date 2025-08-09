@@ -77,14 +77,15 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVReporte.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVReporte.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(200)))));
-            this.DGVReporte.Location = new System.Drawing.Point(6, 178);
+            this.DGVReporte.Location = new System.Drawing.Point(9, 274);
+            this.DGVReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVReporte.MultiSelect = false;
             this.DGVReporte.Name = "DGVReporte";
             this.DGVReporte.ReadOnly = true;
             this.DGVReporte.RowHeadersVisible = false;
             this.DGVReporte.RowHeadersWidth = 62;
             this.DGVReporte.RowTemplate.Height = 30;
-            this.DGVReporte.Size = new System.Drawing.Size(1036, 400);
+            this.DGVReporte.Size = new System.Drawing.Size(1554, 615);
             this.DGVReporte.TabIndex = 95;
             this.DGVReporte.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DGVReporte.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -115,11 +116,12 @@
             this.fecha2text.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fecha2text.ForeColor = System.Drawing.Color.White;
             this.fecha2text.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha2text.Location = new System.Drawing.Point(900, 48);
+            this.fecha2text.Location = new System.Drawing.Point(1350, 74);
+            this.fecha2text.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fecha2text.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.fecha2text.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.fecha2text.Name = "fecha2text";
-            this.fecha2text.Size = new System.Drawing.Size(133, 42);
+            this.fecha2text.Size = new System.Drawing.Size(200, 65);
             this.fecha2text.TabIndex = 97;
             this.fecha2text.Value = new System.DateTime(2025, 7, 8, 13, 43, 33, 424);
             // 
@@ -130,11 +132,12 @@
             this.fecha1text.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fecha1text.ForeColor = System.Drawing.Color.White;
             this.fecha1text.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha1text.Location = new System.Drawing.Point(900, 121);
+            this.fecha1text.Location = new System.Drawing.Point(1350, 186);
+            this.fecha1text.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fecha1text.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.fecha1text.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.fecha1text.Name = "fecha1text";
-            this.fecha1text.Size = new System.Drawing.Size(133, 42);
+            this.fecha1text.Size = new System.Drawing.Size(200, 65);
             this.fecha1text.TabIndex = 98;
             this.fecha1text.Value = new System.DateTime(2025, 7, 8, 0, 25, 43, 762);
             // 
@@ -142,7 +145,8 @@
             // 
             this.LblFecha1.BackColor = System.Drawing.Color.Transparent;
             this.LblFecha1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.LblFecha1.Location = new System.Drawing.Point(900, 20);
+            this.LblFecha1.Location = new System.Drawing.Point(1350, 31);
+            this.LblFecha1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LblFecha1.Name = "LblFecha1";
             this.LblFecha1.Size = new System.Drawing.Size(98, 23);
             this.LblFecha1.TabIndex = 99;
@@ -152,7 +156,8 @@
             // 
             this.LblFecha2.BackColor = System.Drawing.Color.Transparent;
             this.LblFecha2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFecha2.Location = new System.Drawing.Point(900, 96);
+            this.LblFecha2.Location = new System.Drawing.Point(1350, 148);
+            this.LblFecha2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LblFecha2.Name = "LblFecha2";
             this.LblFecha2.Size = new System.Drawing.Size(94, 23);
             this.LblFecha2.TabIndex = 100;
@@ -172,19 +177,18 @@
             this.BtnGenerarReporteFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnGenerarReporteFecha.ForeColor = System.Drawing.Color.White;
             this.BtnGenerarReporteFecha.Image = global::Proyecto_Final_Inventario.Properties.Resources.icons8_print_50;
-            this.BtnGenerarReporteFecha.Location = new System.Drawing.Point(676, 86);
+            this.BtnGenerarReporteFecha.Location = new System.Drawing.Point(1014, 132);
+            this.BtnGenerarReporteFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnGenerarReporteFecha.Name = "BtnGenerarReporteFecha";
-            this.BtnGenerarReporteFecha.Size = new System.Drawing.Size(180, 59);
+            this.BtnGenerarReporteFecha.Size = new System.Drawing.Size(270, 91);
             this.BtnGenerarReporteFecha.TabIndex = 107;
             this.BtnGenerarReporteFecha.Text = "Generar por fecha";
-            this.BtnGenerarReporteFecha.Click += new System.EventHandler(this.BtnGenerarReporteFecha_Click_1);
             // 
             // LblTituloCrearProducto
             // 
             this.LblTituloCrearProducto.BackColor = System.Drawing.Color.Transparent;
             this.LblTituloCrearProducto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTituloCrearProducto.Location = new System.Drawing.Point(441, 20);
-            this.LblTituloCrearProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.LblTituloCrearProducto.Location = new System.Drawing.Point(662, 31);
             this.LblTituloCrearProducto.Name = "LblTituloCrearProducto";
             this.LblTituloCrearProducto.Size = new System.Drawing.Size(183, 48);
             this.LblTituloCrearProducto.TabIndex = 108;
@@ -203,16 +207,17 @@
             this.BtnGenerarRepor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnGenerarRepor.ForeColor = System.Drawing.Color.White;
             this.BtnGenerarRepor.Image = global::Proyecto_Final_Inventario.Properties.Resources.icons8_print_50;
-            this.BtnGenerarRepor.Location = new System.Drawing.Point(71, 86);
+            this.BtnGenerarRepor.Location = new System.Drawing.Point(106, 132);
+            this.BtnGenerarRepor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnGenerarRepor.Name = "BtnGenerarRepor";
-            this.BtnGenerarRepor.Size = new System.Drawing.Size(198, 59);
+            this.BtnGenerarRepor.Size = new System.Drawing.Size(297, 91);
             this.BtnGenerarRepor.TabIndex = 106;
             this.BtnGenerarRepor.Text = "Generar Reporte";
-            this.BtnGenerarRepor.Click += new System.EventHandler(this.BtnGenerarRepor_Click_1);
+            this.BtnGenerarRepor.Click += new System.EventHandler(this.BtnGenerarRepor_Click);
             // 
             // UCReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.LblTituloCrearProducto);
@@ -223,8 +228,9 @@
             this.Controls.Add(this.fecha1text);
             this.Controls.Add(this.fecha2text);
             this.Controls.Add(this.DGVReporte);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UCReporte";
-            this.Size = new System.Drawing.Size(1050, 600);
+            this.Size = new System.Drawing.Size(1575, 923);
             this.Load += new System.EventHandler(this.UCReporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVReporte)).EndInit();
             this.ResumeLayout(false);

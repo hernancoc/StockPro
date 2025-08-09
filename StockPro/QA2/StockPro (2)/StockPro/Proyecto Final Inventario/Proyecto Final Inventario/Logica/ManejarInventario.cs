@@ -1,190 +1,173 @@
-﻿using System;
+﻿using Proyecto_Final_Inventario.Interfaces;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto_Final_Inventario.Entidades;
-using Proyecto_Final_Inventario.Interfaces;
 
 namespace Proyecto_Final_Inventario.Logica
 {
-    internal class ManejarInventario : Inventario, Iinventario
+    internal class ManejarInventario : Iinventario
     {
-        string RutaProductos = @"DLL\Products.txt";
-    
-        public void Entrada(string IDActual, int NuevaCantidad)
+        public void Entrada(int idProducto, int nuevaCantidad)
         {
             try
             {
-                List<string> ListaModificada = new List<string>();
-
-                foreach (var linea in File.ReadLines(RutaProductos))
+                var db = new STOCKPROEntities();
+                var producto = db.Productos.FirstOrDefault(p => p.IDProductos == idProducto);
+                if (producto == null)
                 {
-                    var dividir = linea.Split('|'); // separo la línea por el delimitador |
-
-                    if (dividir[0] == IDActual) // si el ID coincide
-                    {
-                        int CantidadActual = int.Parse(dividir[4]); // obtengo la cantidad actual
-                        int nuevacantidad = CantidadActual + NuevaCantidad; // sumo la nueva cantidad
-                        dividir[4] = nuevacantidad.ToString(); // actualizo la cantidad en el arreglo
-
-                        dividir[10] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // actualizo la fecha de modificación
-                    }
-
-                    // Luego de recorrer el txt completo solo modifica la parte de cantidad y fecha y lo cierra con |
-                    ListaModificada.Add(string.Join("|", dividir));
+                    MessageBox.Show("Producto no encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
-                File.WriteAllLines(RutaProductos, ListaModificada); // sobreescribo el archivo con la nueva info
-
+                producto.Cantidad_Inicial = (producto.Cantidad_Inicial ?? 0) + nuevaCantidad;
+                producto.FechaActualizacion = DateTime.Now;
+                db.SaveChanges();
             }
             catch (Exception ex)
             {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al actualizar la entrada: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public void Salida(string IDActual, int NuevaCantidad)
+        public void Salida(int idProducto, int cantidadSalida)
         {
             try
             {
-                List<string> ListaModificada = new List<string>();
-                bool valido = false;
-
-                foreach (var linea in File.ReadLines(RutaProductos))
+                var db = new STOCKPROEntities();
+                var producto = db.Productos.FirstOrDefault(p => p.IDProductos == idProducto);
+                if (producto == null)
                 {
-                    var dividir = linea.Split('|');
-
-                    if (dividir[0] == IDActual)
-                    {
-                        int CantidadActual = int.Parse(dividir[4]);
-                        if (CantidadActual >= NuevaCantidad)
-                        {
-                            int nuevacantidad = CantidadActual - NuevaCantidad;
-                            dividir[4] = nuevacantidad.ToString();
-
-                            // Actualiza la fecha de actualización a hoy
-                            dividir[10] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-                            valido = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("El valor de salida no puede ser mayor a la cantidad del artículo", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return; // Salir sin modificar archivo
-                        }
-                    }
-                    ListaModificada.Add(string.Join("|", dividir));
+                    MessageBox.Show("Producto no encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
-                if (valido)
-                    File.WriteAllLines(RutaProductos, ListaModificada);
+                int cantidadActual = producto.Cantidad_Inicial ?? 0;
+                if (cantidadActual < cantidadSalida)
+                {
+                    MessageBox.Show("El valor de salida no puede ser mayor a la cantidad del artículo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                producto.Cantidad_Inicial = cantidadActual - cantidadSalida;
+                producto.FechaActualizacion = DateTime.Now;
+                db.SaveChanges();
             }
             catch (Exception ex)
             {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al actualizar la salida: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        
-
-
-        public List<Inventario> LeerProductos()
+        public List<Productos> LeerProductos()
         {
            
-                List<Inventario> lista = new List<Inventario>();
 
-                foreach (var linea in File.ReadLines(RutaProductos))
-                {
-
-                    var dividir = linea.Split('|');
-
-                    Inventario inven = new Inventario
-                    {
-
-                        ID = dividir[0],
-                        Nombre = dividir[1],
-                        Categoria = dividir[2],
-                        Proveedor = dividir[3],
-                        Cantidad = int.Parse(dividir[4]),
-                        PrecioVenta = dividir[5],
-                        PrecioCompra = dividir[6],
-                        Activo = Convert.ToBoolean(dividir[7]),
-                        UrlImagenes = dividir[8],
-                        FechaCreacion = DateTime.Parse(dividir[9]),
-                        FechaActualizacion = DateTime.Parse(dividir[10])
-                    };
-                    lista.Add(inven);
-                }
-                return lista;
-            
-        }
-
-        public void Activar(string Row, string id)
-        {
-            List<string> ListaModificada = new List<string>();
-
-            foreach (var linea in File.ReadLines(RutaProductos))
+            try
             {
 
-                var dividir = linea.Split('|');
+                var db = new STOCKPROEntities();
 
-                if (dividir[0] == id)
-                {
-                    dividir[7] = "True";
-                }
-                ListaModificada.Add(string.Join("|", dividir));
+
+                return db.Productos.Include("Categorias").ToList();
+
             }
-            File.WriteAllLines(RutaProductos, ListaModificada);
-        }
-
-        public void Desactivar(string Row, string id)
-        {
-            List<string> ListaModificada = new List<string>();
-
-            foreach (var linea in File.ReadLines(RutaProductos))
+            catch (Exception ex)
             {
-
-                var dividir = linea.Split('|');
-
-                if (dividir[0] == id)
-                {
-                    dividir[7] = "False";
-                }
-                ListaModificada.Add(string.Join("|", dividir));
+                MessageBox.Show("Ocurrió un error al cargar productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Productos>();
             }
-            File.WriteAllLines(RutaProductos, ListaModificada);
+
         }
 
-        public List<Inventario> filtrar(string texto)
+        public void Activar(int idProducto)
         {
+            try
+            {
+                var db = new STOCKPROEntities();
+                var producto = db.Productos.FirstOrDefault(p => p.IDProductos == idProducto);
+                if (producto == null)
+                {
+                    MessageBox.Show("Producto no encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            texto.Trim().ToLower();
-
-            var listafiltrada = LeerProductos().Where(c => c.Nombre.ToLower().Contains(texto)
-            || c.Proveedor.ToLower().Contains(texto) || c.PrecioCompra.Contains(texto) ||
-             c.Categoria.ToLower().Contains(texto) || c.PrecioVenta.Contains(texto) ||
-             c.ID.Contains(texto)).ToList();
-
-            return listafiltrada;
+                producto.Estado = "T";
+                producto.FechaActualizacion = DateTime.Now;
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al activar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public List<Inventario> filtroCategoria(string texto)
+        public void Desactivar(int idProducto)
         {
-
-
-            texto = texto.Trim().ToLower();
-
-            var listafiltrada = LeerProductos().Where(c =>
-                c.Categoria != null && c.Categoria.ToLower().Contains(texto)).ToList();
-
-            return listafiltrada;
+            try
+            {   
+                var db = new STOCKPROEntities();
+                var producto = db.Productos.FirstOrDefault(p => p.IDProductos == idProducto);
+                if (producto == null)
+                {
+                    MessageBox.Show("Producto no encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                producto.Estado = "F";
+                producto.FechaActualizacion = DateTime.Now;
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al desactivar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        public List<Productos> Filtrar(string texto)
+        {
+            try
+            {
+                texto = texto?.Trim().ToLower() ?? "";
+
+                 var db = new STOCKPROEntities();
+
+                var listaFiltrada = db.Productos.Where(p =>
+                    (p.Nombre != null && p.Nombre.ToLower().Contains(texto)) ||
+                    (p.Proveedor != null && p.Proveedor.ToLower().Contains(texto)) ||
+                    (p.Categorias != null && p.Categorias.Nombre != null && p.Categorias.Nombre.ToLower().Contains(texto)) ||
+                    p.Precio_Compra.ToString().Contains(texto) ||
+                    p.Precio_Venta.ToString().Contains(texto) ||
+                    p.IDProductos.ToString().Contains(texto)
+                ).ToList();
+
+                return listaFiltrada;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al filtrar productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Productos>();
+            }
+        }
+
+        public List<Productos> FiltroCategoria(string texto)
+        {
+            try
+            {
+                texto = texto?.Trim().ToLower() ?? "";
+
+                 var db = new STOCKPROEntities();
+
+                var listaFiltrada = db.Productos
+                    .Where(p => p.Categorias != null && p.Categorias.Nombre != null && p.Categorias.Nombre.ToLower().Contains(texto))
+                    .ToList();
+
+                return listaFiltrada;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al filtrar por categoría: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Productos>();
+            }
+        }
     }
 }

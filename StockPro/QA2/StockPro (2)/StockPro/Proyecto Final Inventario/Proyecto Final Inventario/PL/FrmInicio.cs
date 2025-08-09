@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using Proyecto_Final_Inventario.Entidades;
 using Proyecto_Final_Inventario.Logica;
 
 namespace Proyecto_Final_Inventario.PL

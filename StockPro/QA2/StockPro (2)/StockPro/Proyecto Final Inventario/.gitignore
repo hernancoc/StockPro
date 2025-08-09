@@ -1,0 +1,17 @@
+# Visual Studio
+.vs/
+.vscode/
+# Build folders
+bin/
+obj/
+# User and temp files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vsix
+# DB local files
+*.mdf
+*.ldf
+# Logs
+*.log

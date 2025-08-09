@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_Final_Inventario.Logica;
 
@@ -13,117 +7,158 @@ namespace Proyecto_Final_Inventario.PL
 {
     public partial class UCcrearCategoria : UserControl
     {
+        private ManejoCategoria manejoCategoria;
+
         public UCcrearCategoria()
         {
             InitializeComponent();
+            manejoCategoria = new ManejoCategoria();
         }
 
         private void UCcrearCategoria_Load(object sender, EventArgs e)
         {
             ActualizarDGV();
+            LimpiarCampos();
+            BtnCrear.Visible = true;
         }
 
-        public void ActualizarDGV()
+        private void ActualizarDGV()
         {
-            ManejoCategoria manejoCategoria = new ManejoCategoria();
-            DGVCategoria.DataSource = manejoCategoria.CargarCategorias();
-            DGVCategoria.Columns["_Descripcion"].Visible = false;
-            DGVCategoria.Columns["_NombreCateg"].HeaderText = "Nombre";
-            DGVCategoria.Columns["_EstadoCateg"].HeaderText = "Estado";
-            DGVCategoria.Columns["_FechaCrea"].HeaderText = "Fecha Creacion";
-            BtnDesactivar.Visible = false;
+            var categorias = manejoCategoria.CargarCategorias();
+
+            DGVCategoria.DataSource = categorias.Select(c => new
+            {
+                c.Nombre,
+                c.Descripcion,
+                Estado = c.Estado == "T" ? "Activo" : "Inactivo",
+                FechaCreacion = c.FechaCreacion?.ToShortDateString() ?? ""
+            }).ToList();
+
+            // Ajuste de encabezados
+            DGVCategoria.Columns["Nombre"].HeaderText = "Nombre";
+            DGVCategoria.Columns["Descripcion"].HeaderText = "Descripción";
+            DGVCategoria.Columns["Estado"].HeaderText = "Estado";
+            DGVCategoria.Columns["FechaCreacion"].HeaderText = "Fecha Creación";
+
             BtnActivar.Visible = false;
+            BtnDesactivar.Visible = false;
+        }
+
+        private void LimpiarCampos()
+        {
+            TxtNombreCate.Clear();
+            TxtDescripcion.Clear();
+            CbActivo.Checked = true;
+            DTPFechaCreacion.Value = DateTime.Now;
+
+            BtnCrear.Visible = true;
+
+            DGVCategoria.ClearSelection();
+        }
+
+        private void DGVCategoria_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ActualizarBotonesEstado()
+        {
+            if (DGVCategoria.CurrentRow == null)
+            {
+                BtnActivar.Visible = false;
+                BtnDesactivar.Visible = false;
+                return;
+            }
+
+            string estado = DGVCategoria.CurrentRow.Cells[3].Value.ToString();
+
+            if (estado == "Activo")
+            {
+                BtnActivar.Visible = false;
+                BtnDesactivar.Visible = true;
+            }
+            else
+            {
+                BtnActivar.Visible = true;
+                BtnDesactivar.Visible = false;
+            }
         }
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
-            // Validar que los campos estén completos
-            if (string.IsNullOrWhiteSpace(TxtNombreCate.Text) ||
-                string.IsNullOrWhiteSpace(TxtDescripcion.Text))
+            if (!ValidarCampos()) return;
+
+            var nuevaCategoria = new Categorias
             {
-                MessageBox.Show("Favor complete todos los campos antes de continuar.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Nombre = TxtNombreCate.Text.Trim(),
+                Descripcion = TxtDescripcion.Text.Trim(),
+                Estado = CbActivo.Checked ? "T" : "F",
+                FechaCreacion = DTPFechaCreacion.Value.Date
+            };
+
+            manejoCategoria.CrearCategoria(nuevaCategoria);
+
+            ActualizarDGV();
+            LimpiarCampos();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarCampos()) return;
+
+            // Obtener la categoría original para editar (por nombre)
+            string nombreOriginal = DGVCategoria.CurrentRow?.Cells["Nombre"].Value.ToString();
+            if (string.IsNullOrEmpty(nombreOriginal))
+            {
+                MessageBox.Show("No se ha seleccionado una categoría para editar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            try
+            var categoriaEditada = new Categorias
             {
-                ManejoCategoria manejo = new ManejoCategoria
-                {
-                    _NombreCateg = TxtNombreCate.Text.Trim(),
-                    _Descripcion = TxtDescripcion.Text.Trim(),
-                    _EstadoCateg = CbActivo.Checked,  // Mejor usar .Checked para booleano
-                    _FechaCrea = DTPFechaCreacion.Value.Date // Toma solo la fecha sin hora
-                };
+                Nombre = TxtNombreCate.Text.Trim(),
+                Descripcion = TxtDescripcion.Text.Trim(),
+                Estado = CbActivo.Checked ? "T" : "F",
+                FechaCreacion = DTPFechaCreacion.Value.Date
+            };
 
-                manejo.CrearCategoria(manejo);
-                ActualizarDGV();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió un error al crear la categoría.\n\n" + ex.Message,
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+            manejoCategoria.EditarCategoria(nombreOriginal, categoriaEditada);
 
-        private void DGVCategoria_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            var x = DGVCategoria.CurrentRow.Cells[2].Value.ToString();
-
-            if (x == "True")
-            {
-                BtnActivar.Visible = false;
-                BtnDesactivar.Visible = true;
-            }
-            else if (x == "False")
-            {
-                BtnActivar.Visible = true;
-                BtnDesactivar.Visible = false;
-            }
-            DGVCategoria.Refresh();
-        }
-
-        private void DGVCategoria_Click(object sender, EventArgs e)
-        {
-            var x = DGVCategoria.CurrentRow.Cells[2].Value.ToString();
-
-            if (x == "True")
-            {
-                BtnActivar.Visible = false;
-                BtnDesactivar.Visible = true;
-            }
-            else if (x == "False")
-            {
-                BtnActivar.Visible = true;
-                BtnDesactivar.Visible = false;
-            }
-            DGVCategoria.Refresh();
+            ActualizarDGV();
+            LimpiarCampos();
         }
 
         private void BtnActivar_Click(object sender, EventArgs e)
         {
-            ManejoCategoria manejo = new ManejoCategoria();
-            string fila = DGVCategoria.CurrentRow.Cells[2].Value.ToString();
-            string nombre = DGVCategoria.CurrentRow.Cells[0].Value.ToString();
+            if (DGVCategoria.CurrentRow == null) return;
 
-            manejo.Activar(fila, nombre);
+            string nombre = DGVCategoria.CurrentRow.Cells["Nombre"].Value.ToString();
+            manejoCategoria.Activar(nombre);
 
             ActualizarDGV();
+            LimpiarCampos();
         }
 
         private void BtnDesactivar_Click(object sender, EventArgs e)
         {
-            ManejoCategoria manejo = new ManejoCategoria();
-            string fila = DGVCategoria.CurrentRow.Cells[2].Value.ToString();
-            string nombre = DGVCategoria.CurrentRow.Cells[0].Value.ToString();
+            if (DGVCategoria.CurrentRow == null) return;
 
-            manejo.Desactivar(fila, nombre);
+            string nombre = DGVCategoria.CurrentRow.Cells["Nombre"].Value.ToString();
+            manejoCategoria.Desactivar(nombre);
 
             ActualizarDGV();
+            LimpiarCampos();
         }
 
-        private void DGVCategoria_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private bool ValidarCampos()
         {
-            DGVCategoria.ClearSelection();
+            if (string.IsNullOrWhiteSpace(TxtNombreCate.Text) ||
+                string.IsNullOrWhiteSpace(TxtDescripcion.Text))
+            {
+                MessageBox.Show("Por favor complete todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
 
         private void TxtNombreCate_KeyPress(object sender, KeyPressEventArgs e)
@@ -135,9 +170,56 @@ namespace Proyecto_Final_Inventario.PL
             }
         }
 
-        private void DTPFechaCreacion_ValueChanged(object sender, EventArgs e)
+        private void DGVCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // No necesitas hacer nada aquí si solo quieres tomar la fecha actual del control
+            if (DGVCategoria.CurrentRow == null)
+            {
+                LimpiarCampos();
+                return;
+            }
+
+            string nombreSeleccionado = DGVCategoria.CurrentRow.Cells["Nombre"].Value.ToString();
+
+            var categoria = manejoCategoria.CargarCategorias()
+                .FirstOrDefault(c => c.Nombre == nombreSeleccionado);
+
+            if (categoria != null)
+            {
+                TxtNombreCate.Text = categoria.Nombre;
+                TxtDescripcion.Text = categoria.Descripcion;
+                CbActivo.Checked = categoria.Estado == "T";
+                DTPFechaCreacion.Value = categoria.FechaCreacion ?? DateTime.Now;
+
+                BtnCrear.Visible = false;
+
+                ActualizarBotonesEstado();
+            }
+        }
+
+        private void DGVCategoria_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DGVCategoria.CurrentRow == null)
+            {
+                LimpiarCampos();
+                return;
+            }
+
+            string nombreSeleccionado = DGVCategoria.CurrentRow.Cells["Nombre"].Value.ToString();
+
+            var categoria = manejoCategoria.CargarCategorias()
+                .FirstOrDefault(c => c.Nombre == nombreSeleccionado);
+
+            if (categoria != null)
+            {
+                TxtNombreCate.Text = categoria.Nombre;
+                TxtDescripcion.Text = categoria.Descripcion;
+                CbActivo.Checked = categoria.Estado == "T";
+                DTPFechaCreacion.Value = categoria.FechaCreacion ?? DateTime.Now;
+
+                BtnCrear.Visible = false;
+
+                ActualizarBotonesEstado();
+            }
         }
     }
 }

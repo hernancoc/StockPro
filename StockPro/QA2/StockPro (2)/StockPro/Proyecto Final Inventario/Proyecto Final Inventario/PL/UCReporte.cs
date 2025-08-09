@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto_Final_Inventario.Entidades;
 using Proyecto_Final_Inventario.Logica;
 
 namespace Proyecto_Final_Inventario.PL
@@ -21,43 +13,76 @@ namespace Proyecto_Final_Inventario.PL
 
         private void UCReporte_Load(object sender, EventArgs e)
         {
-            
-            var inventario = new ManejarInventario(); // Creo el manejador de inventario
-
-            var lista = inventario.LeerProductos(); //Leo la lista de productos
-
-            DGVReporte.DataSource = lista; //La asigno al DataGridView
-            DGVReporte.Columns[8].Visible = false;
-
+            CargarDatosReporte();
         }
 
-        private void BtnGenerarRepor_Click_1(object sender, EventArgs e)
+        private void CargarDatosReporte()
         {
-            var productos = new ManejarInventario().LeerProductos();//Creo el manejador de inventario y obtengo la lista
+            try
+            {
+                var inventario = new ManejarInventario();
+                var lista = inventario.LeerProductos();
+                DGVReporte.DataSource = lista;
 
-            var reporte = new ManejoReporte();//Creo el manejador de reportes
-
-            reporte.GenerarReporteInventario(productos);// Le paso la lista de productos para que abra el SaveFileDialog y guarde el CSV
+                // Oculta la columna RutaImagenes (índice 8) si existe
+                if (DGVReporte.Columns.Count > 8)
+                    DGVReporte.Columns[8].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar productos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void BtnGenerarReporteFecha_Click_1(object sender, EventArgs e)
-        {
-            ManejoReporte reporte = new ManejoReporte();
-            ManejarInventario inventario = new ManejarInventario();
+        //private void BtnGenerarRepor_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        var productos = new ManejarInventario().LeerProductos();
+        //        var reporte = new ManejoReporte();
 
-            var productos = inventario.LeerProductos();
+        //        reporte.GenerarReporteInventario(productos);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error al generar el reporte: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
-            DateTime desde = fecha1text.Value;
-            DateTime hasta = fecha2text.Value;
+        //private void BtnGenerarReporteFecha_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        var inventario = new ManejarInventario();
+        //        var productos = inventario.LeerProductos();
 
-            reporte.GenerarReportePorFecha(productos, desde, hasta);
-        }
+        //        DateTime desde = fecha1text.Value.Date;
+        //        DateTime hasta = fecha2text.Value.Date;
+
+        //        if (desde > hasta)
+        //        {
+        //            MessageBox.Show("La fecha 'Desde' no puede ser mayor que la fecha 'Hasta'.", "Fecha inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            return;
+        //        }
+
+        //        var reporte = new ManejoReporte();
+                
+        //        reporte.GenerarReportePorFecha(productos, desde, hasta);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error al generar reporte por fecha: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void LblFecha2_Click(object sender, EventArgs e)
         {
-
+            // Puedes dejar este evento vacío o eliminarlo si no se usa.
         }
 
-        
+        private void BtnGenerarRepor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

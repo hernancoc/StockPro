@@ -1,286 +1,341 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
-using Proyecto_Final_Inventario.Entidades;
+using Proyecto_Final_Inventario;
 using Proyecto_Final_Inventario.Logica;
 
 namespace Proyecto_Final_Inventario.PL
 {
     public partial class UCCrearProducto : UserControl
     {
+        private CrearProducto logicaProducto = new CrearProducto();
+        private ManejoCategoria logicaCategoria = new ManejoCategoria();
+
+        private readonly string carpetaImagenes = Path.Combine(Application.StartupPath, "ImagenesProductos");
+
         public UCCrearProducto()
         {
             InitializeComponent();
+            Load += UCCrearProducto_Load;
         }
-        FrmInicio frmInicio = new FrmInicio();
 
         private void UCCrearProducto_Load(object sender, EventArgs e)
         {
-            TxtCantidad.Maximum = 10000;
-            ManejoCategoria manejoCategoria = new ManejoCategoria();
-            TxtCategoriaDeProducto.Items.AddRange(manejoCategoria.CargarCombobox().ToArray());
+            CargarCategoriasCombo();
+            if (!Directory.Exists(carpetaImagenes))
+                Directory.CreateDirectory(carpetaImagenes);
         }
 
-        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void TxtCategoriaDeProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           // TxtCategoriaDeProducto.Controls.Add();
-        }
-
-        private void TxtId_KeyPress(object sender, KeyPressEventArgs e) //se dispoara cuando el usuario ingresa una tecla
-        {
-            // Verifica si la tecla NO es una tecla de control como Backspace. verifica que no sea un signo de exclamacion ej
-            // y tampoco es un número del 0 al 9
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) // solo entran al if las teclas que no son numericas y que son de control. 
-            {
-                e.Handled = true;
-            }
-            // como deben de cumplirse ambas verifica que si es una letra que es diferente a una letra de control y diferente a un digito entra y se bloquea
-            // Si la tecla no es válida, se cancela su escritura
-        }
-
-        //se dispara al salir del evento
-        private void TxtPrecioCompra_Leave(object sender, EventArgs e)
-        {
-            // Convierto el sender(hace referencia al control en especifico) al tipo Guna2TextBox para trabajar con sus propiedades
-              var txt = (Guna.UI2.WinForms.Guna2TextBox)sender;
-
-            // Intento convertir el texto a decimal para ver si es un número válido
-            if (decimal.TryParse(txt.Text, out decimal valor))
-            {
-                // Si es número, formateo el texto para que tenga dos decimales y separadores de miles
-                txt.Text = valor.ToString("N2");
-            }
-        }
-
-        private void TxtPrecioVenta_Leave(object sender, EventArgs e)
-        {
-            // Convierto el sender(hace referencia al control en especifico) al tipo Guna2TextBox para trabajar con sus propiedades
-            var txt = (Guna.UI2.WinForms.Guna2TextBox)sender;
-
-            // Intento convertir el texto a decimal para ver si es un número válido
-            if (decimal.TryParse(txt.Text, out decimal valor))
-            {
-                // Si es número, formateo el texto para que tenga dos decimales y separadores de miles
-                txt.Text = valor.ToString("N2");
-            }
-        }
-
-        private void TxtPrecioCompra_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla NO es una tecla de control como Backspace. verifica que no sea un signo de exclamacion ej
-            // y tampoco es un número del 0 al 9
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) // solo entran al if las teclas que no son numericas y que son de control. 
-            {
-                e.Handled = true;
-            }
-            // como deben de cumplirse ambas verifica que si es una letra que es diferente a una letra de control y diferente a un digito entra y se bloquea
-            // Si la tecla no es válida, se cancela su escritura
-        }
-
-        private void TxtPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verifica si la tecla NO es una tecla de control como Backspace. verifica que no sea un signo de exclamacion ej
-            // y tampoco es un número del 0 al 9
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) // solo entran al if las teclas que no son numericas y que son de control. 
-            {
-                e.Handled = true;
-            }
-            // como deben de cumplirse ambas verifica que si es una letra que es diferente a una letra de control y diferente a un digito entra y se bloquea
-            // Si la tecla no es válida, se cancela su escritura
-        }
-
-        private void PBImgProductos_Click(object sender, EventArgs e)
-        {
-            //ruta de carpeta de imagenes para que cuando se abra el filedialog esta sea la que este pordefault
-            string rutaimagen = Path.Combine(Application.StartupPath, "C:\\Users\\corom\\OneDrive\\Escritorio\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\ImagenesProductos");
-            OFDImgProduct.InitialDirectory = rutaimagen; // lo lleva la carpet que defini
-            OFDImgProduct.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
-            OFDImgProduct.Title = "Selecciona una imagen";
-
-            if (OFDImgProduct.ShowDialog() == DialogResult.OK) //si el usuario selecciona la imagen y da en ok
-            {
-                // Cargar la imagen en el PictureBox
-                PBImgProductos.Image = Image.FromFile(OFDImgProduct.FileName);
-                PBImgProductos.SizeMode = PictureBoxSizeMode.Zoom; // Ajusta la imagen al tamaño del control
-
-                //txt que guarda la ruta de la imagen
-                TxtRutaImg.Text = OFDImgProduct.FileName.ToString();
-            }
-
-        }
-
-        private void BtnImagen_Click(object sender, EventArgs e)
-        {
-            //ruta de carpeta de imagenes para que cuando se abra el filedialog esta sea la que este pordefault
-            string rutaimagen = Path.Combine(Application.StartupPath, "C:\\Users\\corom\\OneDrive\\Escritorio\\Aprendiendo C#\\Proyecto Final Inventario\\Proyecto Final Inventario\\ImagenesProductos");
-            OFDImgProduct.InitialDirectory = rutaimagen; // lo lleva la carpet que defini
-            OFDImgProduct.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
-            OFDImgProduct.Title = "Selecciona una imagen";
-
-            if (OFDImgProduct.ShowDialog() == DialogResult.OK) //si el usuario selecciona la imagen y da en ok
-            {
-                // Cargar la imagen en el PictureBox
-                PBImgProductos.Image = Image.FromFile(OFDImgProduct.FileName);
-                PBImgProductos.SizeMode = PictureBoxSizeMode.Zoom; // Ajusta la imagen al tamaño del control
-                TxtRutaImg.Text = OFDImgProduct.FileName.ToString();
-            }
-        }
-        
-        public void TxtId_TextChanged(object sender, EventArgs e)
+        private void CargarCategoriasCombo()
         {
             try
             {
-                BtnEditar.Visible = CrearProducto.ValidarEditar(TxtId.Text);
-                BtnCrearProducto.Visible = !CrearProducto.ValidarEditar(TxtId.Text);
+                var categorias = logicaCategoria.CargarCategorias()
+                    .Where(c => c.Estado == "T")
+                    .ToList();
 
-                if (BtnEditar.Visible == true)
+                TxtCategoriaDeProducto.DataSource = categorias;
+                TxtCategoriaDeProducto.DisplayMember = "Nombre";
+                TxtCategoriaDeProducto.ValueMember = "IDCategorias";
+                TxtCategoriaDeProducto.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar categorías: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtId_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(TxtId.Text))
                 {
-                    CrearProducto crear = new CrearProducto();
-                    var producto = crear.BuscarProducto(TxtId.Text);
+                    LimpiarCampos();
+                    BtnCrearProducto.Visible = true;
+                    BtnEditar.Visible = false;
+                    return;
+                }
 
+                if (!int.TryParse(TxtId.Text, out int id))
+                {
+                    MessageBox.Show("El ID debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TxtId.Clear();
+                    return;
+                }
+
+                BtnEditar.Visible = logicaProducto.ValidarEditar(TxtId.Text);
+                BtnCrearProducto.Visible = !BtnEditar.Visible;
+
+                if (BtnEditar.Visible)
+                {
+                    Productos producto = logicaProducto.BuscarProductoConCategoria(TxtId.Text);
                     if (producto != null)
                     {
-                        TxtNombreProd.Text = producto._Nombre;
-                        TxtCategoriaDeProducto.Text = producto._Categoria;
-                        TxtProveedor.Text = producto._Proveedor;
-                        TxtCantidad.Value = producto._Cantidad;
-                        TxtPrecioVenta.Text = producto._PrecioVenta.ToString("N2");
-                        TxtPrecioCompra.Text = producto._PrecioCompra.ToString("N2");
-                        CbActivoEntrada_Salida.Checked = producto._Activo;
-                        TxtRutaImg.Text = producto._UrlImagen;
+                        TxtNombreProd.Text = producto.Nombre;
+                        TxtProveedor.Text = producto.Proveedor;
+                        TxtCantidad.Value = producto.Cantidad_Inicial ?? 0;
+                        TxtPrecioVenta.Text = producto.Precio_Venta.ToString("N2");
+                        TxtPrecioCompra.Text = producto.Precio_Compra.ToString("N2");
+                        CbActivoEntrada_Salida.Checked = producto.Estado == "T";
+
+                        if (!string.IsNullOrEmpty(producto.RutaImagenes))
+                        {
+                            TxtRutaImg.Text = producto.RutaImagenes;
+                            CargarImagenProducto(producto.RutaImagenes);
+                        }
+                        else
+                        {
+                            TxtRutaImg.Clear();
+                            PBImgProductos.Image = null;
+                        }
+
+                        if (producto.IDCategorias > 0)
+                            TxtCategoriaDeProducto.SelectedValue = producto.IDCategorias;
+                        else
+                            TxtCategoriaDeProducto.SelectedIndex = -1;
                     }
                     else
                     {
-                        limpiarTXT();
-
+                        LimpiarCampos();
                     }
                 }
                 else
                 {
-                    limpiarTXT();
+                    LimpiarCampos();
                 }
             }
             catch (Exception ex)
             {
-                Log.EscribirLog(ex);
-                MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CargarImagenProducto(string rutaRelativa)
+        {
+            try
+            {
+                string rutaCompleta = Path.Combine(carpetaImagenes, rutaRelativa);
+                if (File.Exists(rutaCompleta))
+                {
+                    using (var bmpTemp = new Bitmap(rutaCompleta))
+                    {
+                        PBImgProductos.Image = new Bitmap(bmpTemp);
+                    }
+                    PBImgProductos.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+                else
+                {
+                    PBImgProductos.Image = null;
+                }
+            }
+            catch
+            {
+                PBImgProductos.Image = null;
+            }
+        }
+
+        private void BtnSeleccionarImagen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OpenFileDialog ofd = new OpenFileDialog())
+                {
+                    ofd.Filter = "Archivos de Imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                    ofd.Title = "Seleccione una imagen para el producto";
+
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        string nombreArchivo = Path.GetFileName(ofd.FileName);
+                        string destino = Path.Combine(carpetaImagenes, nombreArchivo);
+
+                        if (File.Exists(destino))
+                        {
+                            string nombreSinExt = Path.GetFileNameWithoutExtension(nombreArchivo);
+                            string ext = Path.GetExtension(nombreArchivo);
+                            int contador = 1;
+                            do
+                            {
+                                nombreArchivo = $"{nombreSinExt}_{contador}{ext}";
+                                destino = Path.Combine(carpetaImagenes, nombreArchivo);
+                                contador++;
+                            } while (File.Exists(destino));
+                        }
+
+                        File.Copy(ofd.FileName, destino);
+
+                        TxtRutaImg.Text = nombreArchivo;
+                        CargarImagenProducto(nombreArchivo);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar la imagen: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnCrearProducto_Click(object sender, EventArgs e)
+        {
+            if (!ValidarCampos())
+                return;
+
+            try
+            {
+                if (TxtCategoriaDeProducto.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione una categoría válida.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!decimal.TryParse(TxtPrecioVenta.Text, out decimal precioVenta) ||
+                    !decimal.TryParse(TxtPrecioCompra.Text, out decimal precioCompra))
+                {
+                    MessageBox.Show("Los precios deben ser números válidos.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Productos producto = new Productos
+                {
+                    Nombre = TxtNombreProd.Text.Trim(),
+                    Proveedor = TxtProveedor.Text.Trim(),
+                    Cantidad_Inicial = (int)TxtCantidad.Value,
+                    Precio_Venta = precioVenta,
+                    Precio_Compra = precioCompra,
+                    Estado = CbActivoEntrada_Salida.Checked ? "T" : "F",
+                    RutaImagenes = TxtRutaImg.Text.Trim(),
+                    FechaCreacion = DateTime.Now,
+                    FechaActualizacion = DateTime.Now,
+                    IDCategorias = (int)TxtCategoriaDeProducto.SelectedValue
+                };
+
+                logicaProducto.CreacionProducto(producto);
+                MessageBox.Show("Producto creado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarCampos();
+                TxtId.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            // Validación de campos vacíos
-            if (string.IsNullOrWhiteSpace(TxtId.Text) ||
-                string.IsNullOrWhiteSpace(TxtNombreProd.Text) ||
-                string.IsNullOrWhiteSpace(TxtCategoriaDeProducto.Text) ||
-                string.IsNullOrWhiteSpace(TxtProveedor.Text) ||
-                TxtCantidad.Value == 0 ||
-                string.IsNullOrWhiteSpace(TxtPrecioVenta.Text) ||
-                string.IsNullOrWhiteSpace(TxtPrecioCompra.Text) ||
-                string.IsNullOrWhiteSpace(TxtRutaImg.Text))
-            {
-                MessageBox.Show("favor complete todos los campos antes de continuar.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (!ValidarCampos())
                 return;
-            }
 
             try
             {
-                CrearProducto crearProducto = new CrearProducto
+                if (TxtCategoriaDeProducto.SelectedIndex == -1)
                 {
-                    _Id = int.Parse(TxtId.Text),
-                    _Nombre = TxtNombreProd.Text.ToLower(),
-                    _Categoria = TxtCategoriaDeProducto.Text.ToLower(),
-                    _Proveedor = TxtProveedor.Text.ToLower(),
-                    _Cantidad = (int)TxtCantidad.Value,
-                    _PrecioVenta = double.Parse(TxtPrecioVenta.Text),
-                    _PrecioCompra = double.Parse(TxtPrecioCompra.Text),
-                    _Activo = Convert.ToBoolean(CbActivoEntrada_Salida.CheckState),
-                    _UrlImagen = TxtRutaImg.Text,
-                    _FechaActualizacion = DateTime.Now
+                    MessageBox.Show("Seleccione una categoría válida.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!decimal.TryParse(TxtPrecioVenta.Text, out decimal precioVenta) ||
+                    !decimal.TryParse(TxtPrecioCompra.Text, out decimal precioCompra))
+                {
+                    MessageBox.Show("Los precios deben ser números válidos.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Productos producto = new Productos
+                {
+                    IDProductos = int.Parse(TxtId.Text),
+                    Nombre = TxtNombreProd.Text.Trim(),
+                    Proveedor = TxtProveedor.Text.Trim(),
+                    Cantidad_Inicial = (int)TxtCantidad.Value,
+                    Precio_Venta = precioVenta,
+                    Precio_Compra = precioCompra,
+                    Estado = CbActivoEntrada_Salida.Checked ? "T" : "F",
+                    RutaImagenes = TxtRutaImg.Text.Trim(),
+                    FechaActualizacion = DateTime.Now,
+                    IDCategorias = (int)TxtCategoriaDeProducto.SelectedValue
                 };
 
-                crearProducto.EditarProducto(crearProducto);
-                limpiarTXT();
+                logicaProducto.EditarProducto(producto);
+                MessageBox.Show("Producto actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarCampos();
                 TxtId.Text = "";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al editar el producto.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al actualizar producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void BtnCrearProducto_Click(object sender, EventArgs e)
+        private bool ValidarCampos()
         {
-            // Validar que los campos estén completos
-            if (string.IsNullOrWhiteSpace(TxtId.Text) ||
-                string.IsNullOrWhiteSpace(TxtNombreProd.Text) ||
-                string.IsNullOrWhiteSpace(TxtCategoriaDeProducto.Text) ||
+            if (string.IsNullOrWhiteSpace(TxtNombreProd.Text) ||
+                TxtCategoriaDeProducto.SelectedIndex == -1 ||
                 string.IsNullOrWhiteSpace(TxtProveedor.Text) ||
-                TxtCantidad.Value == 0 ||
+                TxtCantidad.Value <= 0 ||
                 string.IsNullOrWhiteSpace(TxtPrecioVenta.Text) ||
                 string.IsNullOrWhiteSpace(TxtPrecioCompra.Text) ||
                 string.IsNullOrWhiteSpace(TxtRutaImg.Text))
             {
-                MessageBox.Show("Favor complete todos los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                MessageBox.Show("Favor complete todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
+            return true;
+        }
 
+        private void LimpiarCampos()
+        {
+            TxtNombreProd.Clear();
+            TxtCategoriaDeProducto.SelectedIndex = -1;
+            TxtProveedor.Clear();
+            TxtCantidad.Value = 0;
+            TxtPrecioVenta.Clear();
+            TxtPrecioCompra.Clear();
+            CbActivoEntrada_Salida.Checked = false;
+            TxtRutaImg.Clear();
+            PBImgProductos.Image = null;
+        }
+
+        private void BtnImagen_Click(object sender, EventArgs e)
+        {
+        
             try
             {
-                CrearProducto crearProducto = new CrearProducto
+                using (OpenFileDialog ofd = new OpenFileDialog())
                 {
-                    _Id = int.Parse(TxtId.Text),
-                    _Nombre = TxtNombreProd.Text.ToLower(),
-                    _Categoria = TxtCategoriaDeProducto.Text.ToLower(),
-                    _Proveedor = TxtProveedor.Text.ToLower(),
-                    _Cantidad = (int)TxtCantidad.Value,
-                    _PrecioVenta = double.Parse(TxtPrecioVenta.Text),
-                    _PrecioCompra = double.Parse(TxtPrecioCompra.Text),
-                    _Activo = Convert.ToBoolean(CbActivoEntrada_Salida.CheckState),
-                    _UrlImagen = TxtRutaImg.Text,
-                    _FechaCreacion = DateTime.Now,
-                    _FechaActualizacion = DateTime.Now,
-                };
+                    ofd.Filter = "Archivos de Imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                    ofd.Title = "Seleccione una imagen para el producto";
 
-                crearProducto.CreacionProducto(crearProducto);
-                limpiarTXT();
-                TxtId.Text = "";
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        string nombreArchivo = Path.GetFileName(ofd.FileName);
+                        string destino = Path.Combine(carpetaImagenes, nombreArchivo);
+
+                        if (File.Exists(destino))
+                        {
+                            string nombreSinExt = Path.GetFileNameWithoutExtension(nombreArchivo);
+                            string ext = Path.GetExtension(nombreArchivo);
+                            int contador = 1;
+                            do
+                            {
+                                nombreArchivo = $"{nombreSinExt}_{contador}{ext}";
+                                destino = Path.Combine(carpetaImagenes, nombreArchivo);
+                                contador++;
+                            } while (File.Exists(destino));
+                        }
+
+                        File.Copy(ofd.FileName, destino);
+
+                        TxtRutaImg.Text = nombreArchivo;
+                        CargarImagenProducto(nombreArchivo);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al crear el producto.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al seleccionar la imagen: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        public void limpiarTXT()
-        {
-            TxtNombreProd.Clear(); 
-            TxtCategoriaDeProducto.SelectedIndex = -1; 
-            TxtProveedor.Clear(); 
-            TxtCantidad.Value = 0; 
-            TxtPrecioVenta.Clear(); 
-            TxtPrecioCompra.Clear(); 
-            CbActivoEntrada_Salida.Checked = false; 
-            TxtRutaImg.Clear(); 
-            PBImgProductos.Image = null; 
-        }
-
-      
+    
     }
 }

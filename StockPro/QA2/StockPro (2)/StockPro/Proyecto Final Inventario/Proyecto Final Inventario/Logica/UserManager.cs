@@ -1,138 +1,123 @@
-﻿using System;
+﻿using Proyecto_Final_Inventario.Interfaces;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto_Final_Inventario.Entidades;
-using Proyecto_Final_Inventario.Interfaces;
 
-namespace Proyecto_Final_Inventario.Logica
+namespace Proyecto_Final_Inventario
 {
-    internal class UserManager :Usuarios, IUsuario
+    internal class UserManager : IUsuario
     {
-        
-        public  string _labelUserInactive { get; set; }
-        public  string _labelUserIncorrect { get; set; }
-
-        string ArchvioClaves = @"DLL\User.txt";
+        public string _labelUserInactive { get; set; }
+        public string _labelUserIncorrect { get; set; }
 
         public static string UsuarioActual { get; private set; }
 
+        private STOCKPROEntities db = new STOCKPROEntities();
 
-        public bool validacion(string usernameRecibido, string passwordRecibido )
+        public bool validacion(string usernameRecibido, string passwordRecibido)
         {
             try
             {
-                _UserName = usernameRecibido.ToLower();
-                _Password = passwordRecibido;
+                string usernameLower = usernameRecibido.ToLower();
 
+                var usuario = db.Usuarios
+                                .FirstOrDefault(u => u.Usuario.ToLower() == usernameLower && u.PassWord == passwordRecibido);
 
-                foreach (var line in File.ReadLines(ArchvioClaves))
+                if (usuario != null)
                 {
-                    var dividir = line.Split('|');
-                    string UsuarioArchivo = dividir[0].Trim();
-                    string ContraseñaArchivo = dividir[1].Trim();
-                    bool usuarioActivo = Convert.ToBoolean(dividir[2].Trim());
-                    if (UsuarioArchivo == _UserName && ContraseñaArchivo == _Password && usuarioActivo == true)
+                    if (usuario.Estado != null && usuario.Estado.ToUpper() == "T")
                     {
-                        UsuarioActual = _UserName;
+                        UsuarioActual = usuario.Usuario;
                         return true;
                     }
-                    else if (UsuarioArchivo == _UserName && ContraseñaArchivo == _Password && usuarioActivo == false)
+                    else
                     {
                         _labelUserInactive = "Usuario Inactivo, Contacte a su administrador";
                         return false;
                     }
-
                 }
-                _labelUserIncorrect = "Usuario o Contraseña invalidos";
+                else
+                {
+                    _labelUserIncorrect = "Usuario o Contraseña inválidos";
+                    return false;
+                }
             }
             catch (Exception ex)
             {
-                Log.EscribirLog(ex);
                 MessageBox.Show("Ocurrió un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-            return false;
         }
 
         public List<Usuarios> LeerUsuarios()
         {
-            List<Usuarios> lista = new List<Usuarios>();
-
-            foreach (var linea in File.ReadLines(ArchvioClaves))
+            try
             {
-
-                var dividir = linea.Split('|');
-
-                Usuarios usuario = new Usuarios
-                {
-                    _UserName = dividir[0],
-                    _Password = dividir[1],
-                    _UserActive = Convert.ToBoolean(dividir[2])
-                };
-
-                lista.Add(usuario);
+                return db.Usuarios.ToList();
             }
-            return lista;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al leer usuarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Usuarios>();
+            }
         }
 
-        public void Activar(string fila, string usuario)
+        public void Activar(string usuario)
         {
-            List<string> ListaModificada = new List<string>();
-
-            foreach (var linea in File.ReadLines(ArchvioClaves))
+            try
             {
-
-                var dividir = linea.Split('|');
-
-                if (usuario == dividir[0])
+                var user = db.Usuarios.FirstOrDefault(u => u.Usuario == usuario);
+                if (user != null)
                 {
-                    dividir[2] = "True";
+                    user.Estado = "T";
+                    db.SaveChanges();
                 }
-                ListaModificada.Add(string.Join("|", dividir));
             }
-            File.WriteAllLines(ArchvioClaves, ListaModificada);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al activar usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public void Desactivar(string fila, string usuario)
+        public void Desactivar(string usuario)
         {
-            List<string> ListaModificada = new List<string>();
-
-            foreach (var linea in File.ReadLines(ArchvioClaves))
+            try
             {
-
-                var dividir = linea.Split('|');
-
-                if (usuario == dividir[0])
+                var user = db.Usuarios.FirstOrDefault(u => u.Usuario == usuario);
+                if (user != null)
                 {
-                    dividir[2] = "False";
+                    user.Estado = "F";
+                    db.SaveChanges();
                 }
-                ListaModificada.Add(string.Join("|", dividir));
             }
-            File.WriteAllLines(ArchvioClaves, ListaModificada);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al desactivar usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         public void RegistrarInicioSesion(string usuario)
         {
             try
             {
-                string rutaLoggin = @"C:DLL\ReportesLoggin.txt";
+                string rutaLoggin = System.IO.Path.Combine(Application.StartupPath, "ReportesLoggin.txt");
                 string texto = $"{usuario} | Inicio sesión | {DateTime.Now:yyyy-MM-dd HH:mm:ss}";
-                File.AppendAllText(rutaLoggin, texto + Environment.NewLine);
+                System.IO.File.AppendAllText(rutaLoggin, texto + Environment.NewLine);
             }
             catch
             {
                 MessageBox.Show("Ocurrió un error al registrar el inicio de sesión.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         public void RegistrarCierreSesion(string usuario)
         {
             try
             {
-                string rutaLoggin = @"DLL\ReportesLoggin.txt";
+                string rutaLoggin = System.IO.Path.Combine(Application.StartupPath, "ReportesLoggin.txt");
                 string texto = $"{usuario} | Cerró sesión | {DateTime.Now:yyyy-MM-dd HH:mm:ss}";
-                File.AppendAllText(rutaLoggin, texto + Environment.NewLine);
+                System.IO.File.AppendAllText(rutaLoggin, texto + Environment.NewLine);
             }
             catch
             {
@@ -140,6 +125,15 @@ namespace Proyecto_Final_Inventario.Logica
             }
         }
 
+        // Métodos no implementados, según tu interfaz
+        public void Activar(string fila, string usuario)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void Desactivar(string fila, string usuario)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
